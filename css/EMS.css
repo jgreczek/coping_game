@@ -2,13 +2,14 @@
 
 #next {
     margin-left: 500px;
-    margin-top: 200px;
+    margin-top: 200px; 
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     display: none;
 }
 
 .modal {
+    /* change to display: block if you don;t want it to be hidden by default*/
     /*display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
