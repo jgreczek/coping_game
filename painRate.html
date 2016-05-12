@@ -1,0 +1,37 @@
+<html>
+<head>
+	<script type="text/javascript"></script>
+	<script src ="js/painRate.js"></script>
+	<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+		<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+	<link rel ="stylesheet" href="css/painRate.css">
+</head>
+<body>		
+	<input id ="next" type ="image" src = "image/next_level.png" alt = "next level" onClick = "document.location.href = 'breathing.html'"/>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+	<!-- Modal content -->
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <h2>How do you feel?</h2>
+	    </div>
+	    <div class="modal-body">
+	    <ul>
+	     	 <li><input id = "emoj1" type = "image" src = "image/emoj-1.png" alt = "emoj-1" onClick = "pain_rate1()"/>
+	      	 <li><input id = "emoj2" type = "image" src = "image/emoj-2.png" alt = "emoj-2" onClick = "pain_rate2()"/>
+		 <li><input id = "emoj3" type = "image" src = "image/emoj-3.png" alt = "emoj-3" onClick = "pain_rate3()"/>
+		 <li><input id = "emoj4" type = "image" src = "image/emoj-4.png" alt = "emoj-4" onClick = "pain_rate4()"/>
+		 <li><input id = "emoj5" type = "image" src = "image/emoj-5.png" alt = "emoj-5" onClick = "pain_rate5()"/>
+		 <li><input id = "emoj6" type = "image" src = "image/emoj-6.png" alt = "emoj-6" onClick = "pain_rate6()"/>
+	    </ul>    
+	    </div>
+	    <div class="modal-footer">
+	      <h3>   </h3>
+	    </div>
+	  </div>
+
+	</div>
+</body>
+</html>
+
