@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Breathing Game</title>
+		<script src ="js/breathing.js"></script>
+		<script type="text/javascript"></script>
+		<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+		<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<html class = "breathing-bg">
+		<div id = "heart" onClick = "count_breathing()">
+		
+		<!-- with the real image -->
+		<!-- div id = "lung1"><img src = "image/(imagename)"/></div> 
+		<!-- div id = "lung2"><img src = "image/(imagename)"/></div> -->
+		<div id = "lung1"></div> <!--- right lung (from the user's view)-->
+		<div id = "lung2"></div> <!--- left lung (from the user's view)-->
+		</div>
+
+		<div id = "finish">
+		<a href = "chooseVein.html"><img src = "image/next_level.png" alt = "next level"/> 
+		</div>
+	</body>
+</html>
