@@ -6,8 +6,7 @@ html{
 }
 
 .IV-bg{
-	background-image: url("../image/IV-bg");
-	
+	background-image: url("../image/IV-bg");	
 }
 
 #arrow {
@@ -35,6 +34,7 @@ html{
 	margin-left: 1030px;
 }
 
+/* pop up box when the kid is correct */
 #finish{
 	-webkit-border-radius: 12;
 	-moz-border-radius: 12;
