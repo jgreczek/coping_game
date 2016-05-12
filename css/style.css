@@ -1,0 +1,432 @@
+html{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+
+	width: 800px;
+}
+
+.index-bg{
+	background-image: url("../image/pastel-bg.jpeg");
+}
+
+.dressUp-bg{
+	background-image: url("../image/BETA BG.png");
+	width: 1500px;
+	background-repeat: no-repeat;
+}
+
+.IV-bg{
+	background-image: url("../image/IV.jpg");
+	background-repeat: no-repeat;
+}
+
+.MRI-bg{
+	background-image: url("../image/MRI.jpg");
+	background-repeat: no-repeat;
+}
+
+.breathing-bg {
+	background-image: url("../image/breathingBg.png");
+	background-repeat: no-repeat;
+	margin-left: 40px;
+}
+
+
+#Games{
+	padding-top: 450px;
+}
+
+.dressUp img{
+	float: left;
+	margin-top: -150px;
+	margin-left: 150px;
+}
+
+.coping img{
+	float: left;
+	margin-top: -170px;
+	margin-left: 800px;
+}
+
+
+/*Dress Up Game*/
+
+#PrevButton{
+	margin-left: 800px;
+	margin-top: -20px;
+	position: absolute;
+}
+
+#PrevButton li{ /*this is actually next arrow*/
+	list-style-type : none;
+}
+
+#NextButton{
+	padding-left: 250px;
+	margin-top: -20px;
+	position: absolute;
+}
+
+#NextButton li{
+	list-style-type : none;
+	padding-right: 300px;
+}
+
+/* arrow locations*/
+#prevHat {
+	margin-left: -60px;
+}
+
+#nextHat {
+	padding-left: 80px;
+}
+
+#prevFace {
+	padding-top: 40px;
+	margin-left: -20px;
+}
+
+#nextFace {
+	padding-top: 40px;
+	padding-left: 60px;
+}
+
+#prevMouth {
+	padding-top: 10px;
+	margin-left: -90px;
+}
+
+#nextMouth {
+	padding-top: 10px;
+	padding-left: 120px;
+}
+
+#prevBody {
+	padding-top: 20px;
+	margin-left: -120px;
+}
+
+#nextBody {
+	padding-top: 20px;
+	padding-left: 130px;
+}
+
+#prevFeet {
+	padding-top: 30px;
+	margin-left: -40px;
+}
+
+#nextFeet {
+	padding-top: 30px;
+	padding-left: 120px;
+}
+
+#prevAcc {
+	margin-left: 170px;
+	margin-top: -360px;
+}
+
+#nextAcc {
+	margin-left: 170px;
+	padding-top: 250px;
+	margin-top: -80px;
+}
+
+
+/* Maki's base object*/
+/* To edit the position of the dress-up pieces, edit these blocks.*/
+
+#base_head {
+	width: 1000px;
+	height: auto;
+	margin-top: -19px;	
+	margin-left: 130px;
+	position: absolute;
+}
+
+#hat_maki {
+	width: 910px;
+	height: auto;
+	margin-top: -58	px;
+	margin-left: 170px;
+	position: absolute;
+}
+
+#face_maki {
+	width: 1010px;
+	margin-top: -60px;
+	margin-left: 122px;
+	position: absolute;
+}
+
+#body_maki {
+	width: 1010px;
+	height: auto;
+	margin-top: -52px;
+	margin-left: 128px;
+	position: absolute;
+}
+
+#mouth_maki {
+	margin-left: 271px;
+	margin-top: 138px;
+	position: absolute;
+	width: 55%;
+	height: 45%;
+}
+
+#feet_maki {
+	margin-left: 150px;
+	margin-top: 28px;
+	position: absolute;
+	width: 75%;
+	height: 75%;
+}
+
+#acc_maki {
+	margin-left: 480px;
+	margin-top: 70px;
+	position: absolute;
+	width: 60%;
+	height: 60%;
+}
+
+
+#Maki .accessory{
+	margin-left: 250px;
+	margin-top: -200px;
+	position: absolute;
+}	
+
+#changeHat{
+	background-repeat: no-repeat;
+}
+
+#submit_btn{
+	margin-top: -80px;
+	margin-left: 1100px;
+}
+
+#exit_btn{
+	margin-top: 270px;
+	margin-left: 30px;
+}
+
+
+/*IV Game*/
+
+#Component_1{
+	margin-top: 450px;
+	margin-left:450px;
+}
+
+#Component_2{
+	margin-top: 350px;
+	margin-left: 900px;
+}
+
+
+#Explanation1{
+	display: none;
+	background-color:#fff;
+    	color:#000;
+    	padding:20px;
+    	min-width:400px;
+    	min-height: 180px;
+}
+
+#Explanation2{
+	display: none;
+	background-color:#fff;
+    	color:#000;
+    	padding:20px;
+    	min-width:400px;
+    	min-height: 180px;
+}
+
+#Explanation3{
+	display: none;
+	background-color:#fff;
+    	color:#000;
+    	padding:20px;
+    	min-width:400px;
+    	min-height: 180px;
+}
+
+.popup_close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+
+/*MRI Game*/
+
+#Component_MRI_1{
+	margin-top: 450px;
+	margin-left:450px;
+}
+
+#Component_MRI_2{
+	margin-top: 350px;
+	margin-left: 900px;
+}
+
+
+#Component_MRI_3{
+	margin-top: 250px;
+	margin-left: 1300px;
+}
+
+.popup_close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+
+/*bouncing arrow*/
+
+.bounce{
+	position: absolute;
+	animation: bounce 1s infinite;
+	-webkit-animation: bounce 1s infinite;
+	-moz-animation: bounce 1s infinite;
+	-o-animation: bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+
+/*X-Ray MAKI*/
+
+#demo-container{
+	width: 1000px;
+	height: 1000px;
+	margin: 0 auto;
+}
+
+/*
+	lg-container (the looking glass container) will fill its parent container unless specified otherwise.
+*/
+
+#my-container{
+	position: relative;
+	width:100%;
+	height: 600px;
+	margin: 150px auto;
+	overflow: hidden;
+
+}
+
+#lg-bottom-image{
+	border-width: 10px;
+	border-style: solid;
+}
+
+
+/*Breathing game*/
+#heart {
+
+	width: 199px; 
+	height: 89px; 
+	background: #fff200; 
+	margin-top: 120px;
+	margin-left: 510px;
+}
+
+/* this needs to be change to an image instead of a shape + the way to expand an image*/
+#lung1
+{
+	background:red;
+	border-radius:500px;
+	height:200px;
+	width:200px;
+	left: 750px;
+	position: absolute;
+	top: 250px;
+
+	transition:     width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+    -moz-transition:    width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+    -ms-transition:     width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+    -o-transition:      width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+    -webkit-transition: width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+}
+
+#lung2
+{
+	background:red;
+	border-radius:500px;
+	height:200px;
+	width:200px;
+	left: 350px;
+	position: absolute;
+	top: 250px;
+
+	transition:     width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+    -moz-transition:    width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+    -ms-transition:     width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+    -o-transition:      width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+    -webkit-transition: width 5000ms, height 5000ms, border-radius 5000ms,left 5000ms, top 5000ms;
+}
+
+#heart:active #lung1{
+
+	border-radius:1000px;
+	height:400px;
+	width:400px;
+	left: 750px;
+	top: 250px;
+	
+}
+
+#heart:active #lung2{
+
+	border-radius:1000px;
+	height:400px;
+	left: 250px;
+	top: 250px;
+	width:400px;
+} 
+
+/*######################## finish button #############################*/
+#finish{
+	-webkit-border-radius: 12;
+	-moz-border-radius: 12;
+	border-radius: 14px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 60px;
+	background: #3498db;
+	margin-left: 1000px;
+	margin-top: 250px;
+	text-decoration: none;
+	display: none;
+}

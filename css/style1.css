@@ -1,0 +1,82 @@
+html {
+	background-color: black;
+}
+
+h1{
+	font-size: 38px;
+	color: white;
+	margin-top: -550px;
+	padding: 20px;
+}
+
+#goal{
+	position: absolute;
+	font-size: 30px;
+	display: inline-block;
+}
+
+#goal1{
+	position: absolute;
+	font-size: 30px;
+	display: inline-block;
+}
+
+#debug{
+	position: absolute;
+	font-size: 30px;
+	display: inline-block;
+}
+
+#debug1 {
+
+	position: absolute;
+	font-size: 30px;
+	display: inline-block;
+}
+
+
+#destination {
+    width: 550px;
+    height: 780px;
+    /*border: 1px solid #aaaaaa;*/
+    position: relative;
+    margin-top: -200px;
+    margin-left: -180px;
+
+}
+
+#destination img{
+	height: 580px;
+	width: 550px;
+	position: relative;
+}
+
+#pillow1{
+	width: 90px;
+	height: 90px;
+	position: absolute;
+}
+
+#pillow2{
+	width: 90px;
+	height: 90px;
+	position: absolute;
+}
+
+#pillow3{
+	width: 90px;
+	height: 90px;
+	position: absolute;
+}
+
+#finish{
+	-webkit-border-radius: 12;
+	-moz-border-radius: 12;
+	border-radius: 14px;
+	margin-top: -100px;
+	margin-left: -1000px;
+	text-decoration: none;
+	position: absolute;
+	display: none;
+}
+
