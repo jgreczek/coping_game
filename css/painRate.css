@@ -9,6 +9,8 @@
 }
 
 .modal {
+    /* change display to block if you don't want it to be hidden by default*/
+    /* display: block*/
     /*display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
