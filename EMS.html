@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script type="text/javascript"></script>
+	<script src ="js/EMS.js"></script>
+	<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+	<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+	<link rel ="stylesheet" href="css/EMS.css">
+</head>
+<body>		
+	<input id ="next" type ="image" src = "image/next_level.png" alt = "next level" onClick = "document.location.href = 'chooseVein.html'"/>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+	<!-- Modal content -->
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <h2>How do you feel?</h2>
+	    </div>
+	    <div class="modal-body">
+	    <ul>
+	     	 <li><input id = "negative" type = "image" src = "image/negative.png" alt = "negative" onClick = "negative()" height = 50% width = 50% />
+	      	 <li><input id = "neutral" type = "image" src = "image/neutral.png" alt = "neutral" onClick = "neutral()" height = 50% width = 50% />
+		 <li><input id = "positive" type = "image" src = "image/positive.png" alt = "positive" onClick = "positive()" height = 50% width = 50% />
+		
+	    </ul>    
+	    </div>
+	    <div class="modal-footer">
+	      <h3>   </h3>
+	    </div>
+	  </div>
+
+	</div>
+</body>
+</html>
+
