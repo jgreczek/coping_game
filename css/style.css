@@ -218,113 +218,6 @@ body {
 }
 
 
-/*IV Game*/
-
-#Component_1{
-	margin-top: 450px;
-	margin-left:450px;
-}
-
-#Component_2{
-	margin-top: 350px;
-	margin-left: 900px;
-}
-
-
-#Explanation1{
-	display: none;
-	background-color:#fff;
-    	color:#000;
-    	padding:20px;
-    	min-width:400px;
-    	min-height: 180px;
-}
-
-#Explanation2{
-	display: none;
-	background-color:#fff;
-    	color:#000;
-    	padding:20px;
-    	min-width:400px;
-    	min-height: 180px;
-}
-
-#Explanation3{
-	display: none;
-	background-color:#fff;
-    	color:#000;
-    	padding:20px;
-    	min-width:400px;
-    	min-height: 180px;
-}
-
-.popup_close{
-    cursor:pointer;
-    position:absolute;
-    right:10px;
-    top:5px;
-}
-
-/*MRI Game*/
-
-#Component_MRI_1{
-	margin-top: 450px;
-	margin-left:450px;
-}
-
-#Component_MRI_2{
-	margin-top: 350px;
-	margin-left: 900px;
-}
-
-
-#Component_MRI_3{
-	margin-top: 250px;
-	margin-left: 1300px;
-}
-
-.popup_close{
-    cursor:pointer;
-    position:absolute;
-    right:10px;
-    top:5px;
-}
-
-/*bouncing arrow*/
-
-.bounce{
-	position: absolute;
-	animation: bounce 1s infinite;
-	-webkit-animation: bounce 1s infinite;
-	-moz-animation: bounce 1s infinite;
-	-o-animation: bounce 1s infinite;
-}
-
-@-webkit-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
-	40% {-webkit-transform: translateY(-30px);}
-	60% {-webkit-transform: translateY(-15px);}
-}
-
-@-moz-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
-	40% {-moz-transform: translateY(-30px);}
-	60% {-moz-transform: translateY(-15px);}
-}
-
-@-o-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
-	40% {-o-transform: translateY(-30px);}
-	60% {-o-transform: translateY(-15px);}
-}
-
-@keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-30px);}
-	60% {transform: translateY(-15px);}
-}
-
-
 /*X-Ray MAKI*/
 
 #demo-container{
@@ -334,7 +227,7 @@ body {
 }
 
 /*
-	lg-container (the looking glass container) will fill its parent container unless specified otherwise.
+lg-container (the looking glass container) will fill its parent container unless specified otherwise.
 */
 
 #my-container{
