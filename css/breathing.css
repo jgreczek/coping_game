@@ -1,0 +1,74 @@
+html{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	width: 800px;
+}
+
+
+.breathing-bg {
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-image: url("../image/background.png");
+	background-repeat: repeat;
+}
+
+#hose {
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#inflatebutton {
+	position: absolute;
+	width: 369px;
+	height: 268px;
+	margin-top: 480px;
+	margin-left: 435px;
+	background: url("../image/button.png") no-repeat;
+	
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#balloon {
+	position: absolute;
+	width: 283px;
+	height: 242px;
+	margin-top: 180px;
+	margin-left: 480px;
+	background: url("../image/balloon.png") no-repeat;
+	
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#inflatebutton:active + #balloon {
+	-webkit-transform: scale(2,2);
+    -moz-transform: scale(2,2);
+    -o-transform: scale(2,2);
+    -ms-transform: scale(2,2);
+    transform: scale(2,2);
+    transform-origin: center;
+	
+}
+
+#next{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: 540px;
+	margin-left: 940px;
+}

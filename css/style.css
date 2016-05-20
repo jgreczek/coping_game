@@ -14,26 +14,19 @@ body {
 	background-image: url("../image/pastel-bg.jpeg");
 }
 
-.dressUp-bg{
-	background-image: url("../image/BETA BG.png");
-	width: 1500px;
-	background-repeat: no-repeat;
-}
-
 .IV-bg{
-	background-image: url("../image/IV.jpg");
-	background-repeat: no-repeat;
+	background-image: url("../image/background.png");
+	background-repeat: repeat;
 }
 
 .MRI-bg{
-	background-image: url("../image/MRI.jpg");
-	background-repeat: no-repeat;
+	background-image: url("../image/background.png");
+	background-repeat: repeat;
 }
 
 .breathing-bg {
-	background-image: url("../image/breathingBg.png");
-	background-repeat: no-repeat;
-	margin-left: 40px;
+	background-image: url("../image/background.png");
+	background-repeat: repeat;
 }
 
 
@@ -41,182 +34,12 @@ body {
 	padding-top: 450px;
 }
 
-.dressUp img{
-	float: left;
-	margin-top: -150px;
-	margin-left: 150px;
-}
 
 .coping img{
 	float: left;
 	margin-top: -170px;
 	margin-left: 800px;
 }
-
-
-/*Dress Up Game*/
-
-#PrevButton{
-	margin-left: 800px;
-	margin-top: -20px;
-	position: absolute;
-}
-
-#PrevButton li{ /*this is actually next arrow*/
-	list-style-type : none;
-}
-
-#NextButton{
-	padding-left: 250px;
-	margin-top: -20px;
-	position: absolute;
-}
-
-#NextButton li{
-	list-style-type : none;
-	padding-right: 300px;
-}
-
-/* arrow locations*/
-#prevHat {
-	margin-left: -60px;
-}
-
-#nextHat {
-	padding-left: 80px;
-}
-
-#prevFace {
-	padding-top: 40px;
-	margin-left: -20px;
-}
-
-#nextFace {
-	padding-top: 40px;
-	padding-left: 60px;
-}
-
-#prevMouth {
-	padding-top: 10px;
-	margin-left: -90px;
-}
-
-#nextMouth {
-	padding-top: 10px;
-	padding-left: 120px;
-}
-
-#prevBody {
-	padding-top: 20px;
-	margin-left: -120px;
-}
-
-#nextBody {
-	padding-top: 20px;
-	padding-left: 130px;
-}
-
-#prevFeet {
-	padding-top: 30px;
-	margin-left: -40px;
-}
-
-#nextFeet {
-	padding-top: 30px;
-	padding-left: 120px;
-}
-
-#prevAcc {
-	margin-left: 170px;
-	margin-top: -360px;
-}
-
-#nextAcc {
-	margin-left: 170px;
-	padding-top: 250px;
-	margin-top: -80px;
-}
-
-
-/* Maki's base object*/
-/* To edit the position of the dress-up pieces, edit these blocks.*/
-
-#base_head {
-	width: 1000px;
-	height: auto;
-	margin-top: -19px;	
-	margin-left: 130px;
-	position: absolute;
-}
-
-#hat_maki {
-	width: 910px;
-	height: auto;
-	margin-top: -58	px;
-	margin-left: 170px;
-	position: absolute;
-}
-
-#face_maki {
-	width: 1010px;
-	margin-top: -60px;
-	margin-left: 122px;
-	position: absolute;
-}
-
-#body_maki {
-	width: 1010px;
-	height: auto;
-	margin-top: -52px;
-	margin-left: 128px;
-	position: absolute;
-}
-
-#mouth_maki {
-	margin-left: 271px;
-	margin-top: 138px;
-	position: absolute;
-	width: 55%;
-	height: 45%;
-}
-
-#feet_maki {
-	margin-left: 150px;
-	margin-top: 28px;
-	position: absolute;
-	width: 75%;
-	height: 75%;
-}
-
-#acc_maki {
-	margin-left: 480px;
-	margin-top: 70px;
-	position: absolute;
-	width: 60%;
-	height: 60%;
-}
-
-
-#Maki .accessory{
-	margin-left: 250px;
-	margin-top: -200px;
-	position: absolute;
-}	
-
-#changeHat{
-	background-repeat: no-repeat;
-}
-
-#submit_btn{
-	margin-top: -80px;
-	margin-left: 1100px;
-}
-
-#exit_btn{
-	margin-top: 270px;
-	margin-left: 30px;
-}
-
 
 /*X-Ray MAKI*/
 
@@ -253,6 +76,48 @@ lg-container (the looking glass container) will fill its parent container unless
 	background: #fff200; 
 	margin-top: 120px;
 	margin-left: 510px;
+}
+
+#hose {
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+/* http://www.the-art-of-web.com/css/css-animation/ */
+div.inflatebutton div {
+	position: absolute;
+	width: 369px;
+	height: 268px;
+	margin-top: 480px;
+	margin-left: 435px;
+	background: url("../image/button.png") no-repeat;
+}
+
+#balloon {
+	position: absolute;
+	width: 565px;
+	height: 483px;
+	margin-top: 70px;
+	margin-left: 340px;
+	background: url("../image/balloon.png") no-repeat;
+	
+	-webkit-transition: 1s scale(2,2);
+    -moz-transition: 1s scale(2,2);
+    -o-transition: 1s scale(2,2);
+    transition: 1s scale(2,2);
+}
+
+#inflatebutton:hover + #balloon{
+	-webkit-transform: scale(2,2);
+    -moz-transform: scale(2,2);
+    -o-transform: scale(2,2);
+    -ms-transform: scale(2,2);
+    transform: scale(2,2);
+    left: calc(100% - 340px);
+	
 }
 
 /* this needs to be change to an image instead of a shape + the way to expand an image*/
@@ -310,16 +175,10 @@ lg-container (the looking glass container) will fill its parent container unless
 } 
 
 /*######################## finish button #############################*/
-#finish{
-	-webkit-border-radius: 12;
-	-moz-border-radius: 12;
-	border-radius: 14px;
-	font-family: Arial;
-	color: #ffffff;
-	font-size: 60px;
-	background: #3498db;
-	margin-left: 1000px;
-	margin-top: 250px;
-	text-decoration: none;
-	display: none;
+#next{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: 570px;
+	margin-left: 1040px;
 }
