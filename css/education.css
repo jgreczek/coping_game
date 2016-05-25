@@ -1,0 +1,103 @@
+html{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.IV-bg{
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-image: url("../image/background.png");
+	background-repeat: repeat;	
+}
+
+#arm {
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-image: url("../image/arm.png");
+}
+
+/* Education Step 1: Choose largest vein */
+
+#correctVein {
+	position: absolute;
+	width: 188px;
+	height: 111px;
+	margin-top: 230px;
+	margin-left: 880px;
+	background-image: url("../image/correctVein.png");
+}
+
+#vein1 {
+	position: absolute;
+	width: 149px;
+	height: 86px;
+	margin-top: 390px;
+	margin-left: 480px;
+	background-image: url("../image/vein1.png");
+}
+
+#vein2 {
+	position: absolute;
+	width: 135px;
+	height: 93px;
+	margin-top: 320px;
+	margin-left: 950px;
+	background-image: url("../image/vein2.png");
+}
+
+/* Education Step 2: Cold spray */
+
+.coldSpray-bg{
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-image: url("../image/mergedBackground.png");
+	background-repeat: no-repeat;	
+}
+
+/* Education Step 3: Insertion */
+
+#arrow {
+
+	position: absolute;
+	width: 90px;
+	height: 90px;
+}
+
+#destination1{
+
+	width: 100px;
+	height: 100px;
+	border: 5px solid #FFFF00;
+	margin-top: 170px;
+	margin-left: 890px;
+}
+
+#destination2{
+
+	width: 100px;
+	height: 100px;
+	border: 5px solid #FFFF00;
+	margin-top: -40px;
+	margin-left: 1030px;
+}
+
+/* Education Step 4: Wrap Gauze */
+
+
+
+#next{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: 540px;
+	margin-left: 940px;
+}

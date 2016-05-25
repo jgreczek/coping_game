@@ -5,7 +5,6 @@ var main_topic;
 window.onload = setup;
 
 function setup(){
-	
 
 	//Make sure to change the IP
 	var ros = new ROSLIB.Ros({
@@ -38,31 +37,63 @@ function setup(){
 
 	});
 
-	start_breathing();
+	start_painRate();
 }
 
-function start_breathing(){
+function start_painRate(){
 
 	var message = new ROSLIB.Message({
-		data: "START Coping Strategy 1: Breathing"
+		data: "Starting EMS"
 	});
 
 	main_topic.publish(message);
 } 
 
-var breath = 0;
-function count_breathing() {
-
-	breath = breath + 1;
-	console.log(breath);
+var EMS_rate;
+function negative() {
+	
+	EMS_rate = 1;
+	console.log('pain rate: ' + EMS_rate);
+	var modal = document.getElementById('myModal');
+	modal.style.display = "none";	
+	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
-		data: "Breath taken"
+		data: "EMS: bad"
 	});
 
 	main_topic.publish(message);
-
-	if (breath >= 2) {
-		document.getElementById("next").style.visibility = "visible";
-	}
 }
+
+
+function neutral() {
+
+	EMS_rate = 2;
+	console.log('pain rate: ' + EMS_rate);
+	var modal = document.getElementById('myModal');
+	modal.style.display = "none";		
+	document.getElementById("next").style.display = "block";
+	
+	var message = new ROSLIB.Message({
+		data: "EMS: average"
+	});
+
+	main_topic.publish(message);
+}
+
+
+function positive() {
+
+	EMS_rate = 3;
+	console.log('pain rate: ' + EMS_rate);
+	var modal = document.getElementById('myModal');
+	modal.style.display = "none";	
+	document.getElementById("next").style.display = "block";
+
+	var message = new ROSLIB.Message({
+		data: "EMS: good"
+	});
+
+	main_topic.publish(message);
+}
+

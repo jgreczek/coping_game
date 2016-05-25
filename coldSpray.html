@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Cold Spray</title>
+		<script src ="js/coldSpray.js"></script>
+		<script type="text/javascript"></script>
+		<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+		<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+		<link rel ="stylesheet" href="css/education.css">
+	</head>
+	<body>
+		<html class = "coldSpray-bg">
+		
+		<!-- PROBLEM: on click (mouseup), link is activated to advance to next screen? -->
+		<div id = "next" style="visibility: hidden">
+			<a href = "insertion.html"><img src = "image/next.png" alt = "click to continue"/> 
+		</div>
+		
+		<canvas></canvas>
+
+		<script>
+			var c = document.querySelector('canvas');
+			var cx = c.getContext('2d');
+			var background = new Image();
+			background.src = "image/mergedBackground.png";
+			var mousedown = false;
+			var oldx = null;
+			var oldy = null;
+			var pixels = null;
+			var shapepixels = null;
+			c.addEventListener('mousedown', onmousedown, false);
+			c.addEventListener('mouseup', onmouseup, false);
+			c.addEventListener('mousemove', onmousemove, false);
+			c.addEventListener('touchstart', ontouchstart, false);
+			c.addEventListener('touchend', ontouchend, false);
+			c.addEventListener('touchmove', ontouchmove, false);
+			setupCanvas();
+		</script>
+		
+	</body>
+</html>
