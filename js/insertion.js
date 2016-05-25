@@ -17,8 +17,13 @@ function prepare(){
 	w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
+<<<<<<< HEAD
     document.getElementById("next").style.left = w - 300; 
     document.getElementById("next").style.top = h - 150;
+=======
+    document.getElementById("finish").style.left = w - 300; 
+    document.getElementById("finish").style.top = h - 150;
+>>>>>>> 20cfdb1501e6b1276baa6c1ae1189def12bd8f2b
 
     h = h - 100; 
 
@@ -32,6 +37,7 @@ function prepare(){
 
     //w move right by decreasing number , move left by increasig number
     //h move up by increasing number, move down by decreasing number
+<<<<<<< HEAD
 	document.getElementById("needle").style.left = w - 1000; 
 	document.getElementById("needle").style.top = h - 330;
     dragSetup("needle");
@@ -39,6 +45,15 @@ function prepare(){
 
     document.getElementById("next").style.left = w - 250; 
     document.getElementById("next").style.top = h - 20;
+=======
+	document.getElementById("arrow").style.left = w - 1000; 
+	document.getElementById("arrow").style.top = h - 330;
+    dragSetup("arrow");
+    //console.log(pillowX + " , " + pillowY);
+
+    document.getElementById("finish").style.left = w - 250; 
+    document.getElementById("finish").style.top = h - 20;
+>>>>>>> 20cfdb1501e6b1276baa6c1ae1189def12bd8f2b
     
    /* document.getElementById("goal").style.left = w - 900; 
     document.getElementById("goal").style.top = h - 15;
@@ -89,7 +104,11 @@ function touchmove(event){
     var ymin = 140 + 'px';
     var ymax = 450 + 'px';	
 
+<<<<<<< HEAD
     if (name == "needle"){
+=======
+    if (name == "arrow"){
+>>>>>>> 20cfdb1501e6b1276baa6c1ae1189def12bd8f2b
         event.target.style.left = (touch.pageX) + 'px';
         event.target.style.top = (touch.pageY) + 'px';
 	//document.getElementById("debug").innerHTML = choice + ": " + event.target.style.left + " , " + event.target.style.top;
@@ -100,14 +119,22 @@ function touchmove(event){
        if (event.target.style.top >= ymin && event.target.style.top <= ymax ){ //check if y is in the box
           //document.getElementById("goal").innerHTML = choice + " in the box!";
 	    if (result.length == 1) {
+<<<<<<< HEAD
 		document.getElementById("needle").style.opacity = 0;
+=======
+		document.getElementById("arrow").style.opacity = 0;
+>>>>>>> 20cfdb1501e6b1276baa6c1ae1189def12bd8f2b
 		document.getElementById("destination1").style.opacity = 0;
 		document.getElementById("destination2").style.opacity = 0;
 
 		if (alldone < 1) {
 			alert ("You are correct!");
 			alldone = 1;
+<<<<<<< HEAD
 			document.getElementById("next").style.display = "inline";
+=======
+			document.getElementById("finish").style.display = "inline";
+>>>>>>> 20cfdb1501e6b1276baa6c1ae1189def12bd8f2b
 		}
 	    }
 
@@ -141,7 +168,10 @@ function checkAnswer(){
         topic.publish(message);
         */
         alert("correct");
+<<<<<<< HEAD
         display_next();
+=======
+>>>>>>> 20cfdb1501e6b1276baa6c1ae1189def12bd8f2b
 
     }
     else{
@@ -183,9 +213,12 @@ function remove(name){
         result.sort();
     }
 }
+<<<<<<< HEAD
 
 function display_next() {
 
 	document.getElementById("next").style.visibility = "visible";
 
 }
+=======
+>>>>>>> 20cfdb1501e6b1276baa6c1ae1189def12bd8f2b
