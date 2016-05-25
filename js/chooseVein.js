@@ -38,31 +38,20 @@ function setup(){
 
 	});
 
-	start_breathing();
+	start_chooseVein();
 }
 
-function start_breathing(){
+function start_chooseVein(){
 
 	var message = new ROSLIB.Message({
-		data: "START Coping Strategy 1: Breathing"
+		data: "START Coping Strategy 2: Education Step 1: Choose Vein"
 	});
 
 	main_topic.publish(message);
 } 
 
-var breath = 0;
-function count_breathing() {
+function display_next() {
 
-	breath = breath + 1;
-	console.log(breath);
-	
-	var message = new ROSLIB.Message({
-		data: "Breath taken"
-	});
+	document.getElementById("next").style.visibility = "visible";
 
-	main_topic.publish(message);
-
-	if (breath >= 2) {
-		document.getElementById("next").style.visibility = "visible";
-	}
 }

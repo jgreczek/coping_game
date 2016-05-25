@@ -1,23 +1,27 @@
 <html>
 	<head>
-		<title>Choose the Biggest Vein</title>
-		<script src ="js/chooseVein.js"></script>
+		<title>IV Insertion</title>
+		<script src ="js/IVinsertion.js"></script>
 		<script type="text/javascript"></script>
 		<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
 		<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
 		<link rel ="stylesheet" href="css/education.css">
 	</head>
 	<body>
+		
 		<html class = "IV-bg">
 			
 		<div id = "arm"></div>
+		<div id = "correctVeinFaint"></div> 
 
-		<div id = "vein1" ></div>
-		<div id = "vein2" ></div>
-		<div id = "correctVein" onClick = "display_next()"></div> 
+		<!-- <img id = "needle" src = "image/ivneedle.png" draggable = "true" ondrag = "recordDrag(this);" > -->
+		<div id = "needle" ></div>
+		
+		<div id = "overlay"></div>
 
 		<div id = "next" style="visibility: hidden">
-			<a href = "coldSpray.html"><img src = "image/next.png" alt = "click to continue"/> 
+			<a href = "pillowDrop.html"><img src = "image/next.png" alt = "click to continue"/> 
 		</div>
 	</body>
 </html>
+
