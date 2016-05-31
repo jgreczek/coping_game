@@ -137,6 +137,7 @@ function pixelthreshold() {
 	if ( getpixelamount(102, 255, 255) > 78000) {
 		// alert ('you got it');
 		document.getElementById("next").style.visibility = "visible";
+		document.getElementById("next").href = "insertion.html";
 	}
 };
 // Touch event listener for laptop
