@@ -135,9 +135,9 @@ function pixelthreshold() {
 	console.log(getpixelamount(102, 255, 255));
 	console.log(shapepixels);
 	if ( getpixelamount(102, 255, 255) > 78000) {
-		// alert ('you got it');
-		document.getElementById("next").style.visibility = "visible";
-		document.getElementById("next").href = "insertion.html";
+		 //alert ('you got it');
+		 //document.getElementById("next").style.visibility = "visible";
+		 display_next();
 	}
 };
 // Touch event listener for laptop
@@ -179,6 +179,6 @@ function onmousemove(ev) {
 
 function display_next() {
 
-	document.getElementById("next").style.visibility = "visible";
+	document.getElementById("next_spray").style.visibility = "visible";
 
 }
