@@ -59,7 +59,7 @@ html{
 	height: 800px;
 	margin-top: 0px;
 	margin-left: 0px;
-	background-image: url("../image/mergedBackground.png");
+	/*background-image: url("../image/mergedBackground.png");*/
 	background-repeat: no-repeat;	
 }
 
@@ -121,5 +121,13 @@ html{
 	width: 268px;
 	height: 194px;
 	margin-top: 540px;
+	margin-left: 940px;
+}
+
+#next_spray{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: -310px;
 	margin-left: 940px;
 }
