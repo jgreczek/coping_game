@@ -1,6 +1,8 @@
 var ros;
 var main_topic;
 var allowClick;
+var w;
+var h;
 
 //Connecting to ROS
 window.onload = setup;
@@ -40,20 +42,24 @@ function setup(){
 	});
 
 	addListeners();
+	addListeners_touch();
 	start_insertion();
 }
 
+// for mouse (PC)
 function addListeners(){
     document.getElementById('needle').addEventListener('mousedown', mouseDown, false);
     window.addEventListener('mouseup', mouseUp, false);
     allowClick = true;
 }
 
+
 function mouseUp(){
 	if (allowClick == true) {
 		window.removeEventListener('mousemove', divMove, true);
 	}
 }
+
 
 function mouseDown(e){
 	if (allowClick == true) {
@@ -72,6 +78,40 @@ function divMove(e){
 	if (e.clientX > 880 && e.clientX < 980 && e.clientY > 300 && e.clientY < 400) {
 		display_next();
 		window.removeEventListener('mousemove', divMove, true);
+		allowClick = false;
+	}
+}
+
+// for touch (tablet)
+function addListeners_touch(){
+
+	document.body.addEventListener('touchmove', function(e){ e.preventDefault(); }); //disable scroll
+	w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+	var needle = document.getElementById('needle');
+	needle.style.left 
+
+	var touch_listener = document.getElementById('needle');
+	touch_listener.addEventListener('touchmove', touchmove, false);
+	allowClick = true;
+}
+
+function touchmove(e) {
+
+	var touch = e.targetTouches[0];
+	var name = e.target.id;
+	
+	var needle = document.getElementById('needle');
+	needle.style.position = 'absolute'
+
+	e.target.style.left = (touch.pageX) - 700 + 'px';
+	e.target.style.top = (touch.pageY) - 400 + 'px';
+
+	
+	if (touch.pageX > 880 && touch.pageX < 980 && touch.pageY > 0 && touch.pageY < 400) {
+		display_next();
+		needle.removeEventListener('touchmove', touchmove, false);
 		allowClick = false;
 	}
 }
