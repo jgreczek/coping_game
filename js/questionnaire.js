@@ -1,23 +1,156 @@
+// Each item is given a score of one for a “yes” response, yielding a Total Anxiety score (Ag).
+// We want to send and record:
+// 1) All the answers for every question (Question #, Answer)
+// 2) the number of "yes" responses for each participant.
+
 var questions = [{
-    question: "What is 2*5?",
-    choices: ["kkk", 5, 10, 15, 20],
-    correctAnswer: 2
+    question: "I have trouble making up my mind.", //1
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
   }, {
-    question: "What is 3*6?",
-    choices: [3, 6, 9, 12, 18],
-    correctAnswer: 4
+    question: "I get nervous when things do not go the right way for me.", //2
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
   }, {
-    question: "What is 8*9?",
-    choices: [72, 99, 108, 134, 156],
-    correctAnswer: 0
+    question: "Others seem to do things easier than I can.", //3
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
   }, {
-    question: "What is 1*7?",
-    choices: [4, 5, 6, 7, 8],
-    correctAnswer: 3
+    question: "I like everyone I know.", //4
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
   }, {
-    question: "What is 8*8?",
-    choices: [20, 30, 40, 50, 64],
-    correctAnswer: 4
+  question: "Often I have trouble getting my breath.", //5 
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I worry a lot of the time.", //6
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I am afraid of a lot of things.", //7
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+	question: "I am always kind.", //8
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I get mad easily.", //9
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I worry about what my parents will say to me.", //10
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I feel that others do not like the way I do things.", //11
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I always have good manners.", //12
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "It is hard for me to get to sleep at night.", //13
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+	question: "I worry about what other people think about me.", //14
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I feel alone even when there are people with me.", //15
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I am always good.", //16
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "Often I feel sick in the stomach.", //17
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "My feelings get hurt easily.", //18
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "My hands feel sweaty.", //19
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+	question: "I am always nice to everyone.", //20
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I am tired a lot.", //21
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I worry about what is going to happen.", //22
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "Other children are happier than I am.", //23
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I tell the truth every single time.", //24
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I have bad dreams.", //25
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+	question: "My feelings get hurt easily when I am fussed at.", //26
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I feel someone will tell me I do things the wrong way.", //27
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I never get angry.", //28
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I wake up scared some of the time.", //29
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I worry when I go to bed at night.", //30
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "It is hard for me to keep my mind on my schoolwork.", //31
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+	question: "I never say things that I shouldn’t.", //32
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I wriggle in my seat a lot.", //33
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I am nervous.", //34
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "A lot of people are against me.", //35
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I never lie.", //36
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
+  }, {
+    question: "I often worry about something bad happening to me.", //37
+    choices: ["Yes", "No"],
+    correctAnswer: "Yes"
   }];
   
   var questionCounter = 0; //Tracks question number
@@ -213,7 +346,7 @@ var questions = [{
       }
     }
     //score.append('You got ' + numCorrect + ' questions out of ' + questions.length + ' right!!!');
-    score.append('Thank you,' + selections[0] + ',' + selections[1] + ',' + selections[2] + ',' + selections[3] + ',' + selections[4]);
+    score.append('Thank you!');
     return score;
   }	
 
@@ -228,7 +361,7 @@ var questions = [{
 
   function start_questionnaire() {
   	var message = new ROSLIB.Message({
-		data: "Starting CPASS survey"
+		data: "Starting Pre-Study Questionnaire"
 	});
 
 	main_topic.publish(message);
