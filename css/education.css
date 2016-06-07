@@ -114,6 +114,35 @@ html{
 
 /* Education Step 4: Wrap Gauze */
 
+#arm_gauze {
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#gauze_display {
+	display: inline;
+}
+#gauze1{
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+
+#gauze2{
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+
+#gauze3{
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+
 
 
 #next{
@@ -124,6 +153,7 @@ html{
 	margin-left: 940px;
 }
 
+/*next_spray is the id used by coldSpray game*/
 #next_spray{
 	position: absolute;
 	width: 268px;
