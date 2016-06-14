@@ -118,7 +118,7 @@ html{
 	position: absolute;
 	width: 1280px;
 	height: 800px;
-	margin-top: 0px;
+	margin-top: -8px;
 	margin-left: 0px;
 }
 
@@ -149,7 +149,7 @@ html{
 	position: absolute;
 	width: 268px;
 	height: 194px;
-	margin-top: 540px;
+	margin-top: 500px;
 	margin-left: 940px;
 }
 
