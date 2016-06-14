@@ -1,0 +1,103 @@
+html{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	width: 800px;
+}
+
+.valueReminder-bg {
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-image: url("../image/background.png");
+	background-repeat: repeat;
+}
+
+#val1{
+	opacity:1;
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+	margin-top: 50px;
+	margin-left: 50px;
+	background: url("../image/values1.png") no-repeat;	
+
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#val2{
+	opacity:1;
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+	margin-top: 400px;
+	margin-left: 50px;
+	background: url("../image/values2.png") no-repeat;	
+
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#val3{
+	opacity:1;
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+	margin-top: 220px;
+	margin-left: 400px;
+	background: url("../image/values3.png") no-repeat;
+
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#val4{
+	opacity:1;
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+	margin-top: 50px;
+	margin-left: 700px;
+	background: url("../image/values4.png") no-repeat;
+
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#val5{
+	opacity:1;
+	position: absolute;
+	width: 1280px;
+	height: 800px;
+	margin-top: 480px;
+	margin-left: 550px;
+	background: url("../image/values5.png") no-repeat;
+
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+
+#next{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: 540px;
+	margin-left: 940px;
+}
