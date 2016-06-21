@@ -6,6 +6,8 @@ h1 {
     text-align: center;
 }
 
+.big{ width: 3em; height: 3em; }
+
 #title {
     /* text-decoration: underline; */
 }
@@ -82,7 +84,7 @@ ul {
 
 li {
 	padding: 100px;
-    margin: 100px;
+        margin: 100px;
 	display:inline;
 	font-size: 36px;
 }
