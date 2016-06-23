@@ -44,7 +44,7 @@ function setup(){
 function start_breathing(){
 
 	var message = new ROSLIB.Message({
-		data: "Start value reminder"
+		data: "Value reminder"
 	});
 
 	main_topic.publish(message);

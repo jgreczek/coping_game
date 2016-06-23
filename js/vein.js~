@@ -4,7 +4,7 @@ var choice;
 var items = [];
 var answer = [];
 var result = [];
-var num = [1, 2, 3];
+var num = [1];
 window.onload = prepare;
 var w; 
 var h;
@@ -17,51 +17,43 @@ function prepare(){
 	w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-    document.getElementById("goal").style.left = w - 900; 
-    document.getElementById("goal").style.top = h - 650; 
-
     document.getElementById("finish").style.left = w - 300; 
     document.getElementById("finish").style.top = h - 150;
 
     h = h - 100; 
 
-    document.getElementById("destination").style.left = w - 400; 
-    document.getElementById("destination").style.top = h - 350;
+    document.getElementById("destination1").style.left = w - 400; 
+    document.getElementById("destination1").style.top = h - 350;
+    
+    document.getElementById("destination2").style.left = w - 400; 
+    document.getElementById("destination2").style.top = h - 350;
 
     //document.getElementById("destination").addEventListener('touchenter', itemEnter, false);
 
     //w move right by decreasing number , move left by increasig number
     //h move up by increasing number, move down by decreasing number
-	document.getElementById("pillow1").style.left = w - 1000; 
-	document.getElementById("pillow1").style.top = h - 330;
-    dragSetup("pillow1");
+	document.getElementById("arrow").style.left = w - 1000; 
+	document.getElementById("arrow").style.top = h - 330;
+    dragSetup("arrow");
     //console.log(pillowX + " , " + pillowY);
-
-    document.getElementById("pillow2").style.left = w - 800; 
-    document.getElementById("pillow2").style.top = h - 330;
-    dragSetup("pillow2");
-    
-    document.getElementById("pillow3").style.left = w - 600; 
-    document.getElementById("pillow3").style.top = h - 330;
-    dragSetup("pillow3");
 
     document.getElementById("finish").style.left = w - 250; 
     document.getElementById("finish").style.top = h - 20;
     
-    document.getElementById("goal").style.left = w - 900; 
+   /* document.getElementById("goal").style.left = w - 900; 
     document.getElementById("goal").style.top = h - 15;
 
     document.getElementById("goal1").style.left = w- 900; 
     document.getElementById("goal1").style.top = h + 25;
 
     document.getElementById("debug").style.left = w - 900; 
-    document.getElementById("debug").style.top = h - 200;
+    document.getElementById("debug").style.top = h - 200;*/
 
    
     //connecting to ROS
     ros = new ROSLIB.Ros({
         //url : 'ws://ice_newt:9090'
-        url : 'ws://192.168.7.194:9090'
+        url : 'ws://192.168.7.70:9090'
     });
 
     ros.on('connection', function(){
@@ -92,44 +84,33 @@ function touchmove(event){
    // document.getElementById("debug").innerHTML = choice + ": " + event.target.style.left + " , " + event.target.style.top;
    // document.getElementById("debug").innerHTML = event.target.style.left + ", " + event.target.style.top;
 
-    var xmin = 782 + 'px'; 
-    var xmax = 999 + 'px';
+    var xmin = 882 + 'px'; 
+    var xmax = 950 + 'px';
     var ymin = 140 + 'px';
     var ymax = 450 + 'px';	
 
-    if (name == "pillow1"){
+    if (name == "arrow"){
         event.target.style.left = (touch.pageX) + 'px';
         event.target.style.top = (touch.pageY) + 'px';
 	//document.getElementById("debug").innerHTML = choice + ": " + event.target.style.left + " , " + event.target.style.top;
     }
-    else if (name == "pillow2"){
-        event.target.style.left = (touch.pageX) + 'px';
-        event.target.style.top = (touch.pageY) + 'px';
-	//document.getElementById("debug").innerHTML = choice + ": " + event.target.style.left + " , " + event.target.style.top;
 
-    }
-    else if (name == "pillow3"){
-        event.target.style.left = (touch.pageX) + 'px';
-        event.target.style.top = (touch.pageY) + 'px';
-	//document.getElementById("debug").innerHTML = choice + ": " + event.target.style.left + " , " + event.target.style.top;
-    }
 
     if (event.target.style.left >= xmin && event.target.style.left <= xmax ){ //check if x is in the box
        if (event.target.style.top >= ymin && event.target.style.top <= ymax ){ //check if y is in the box
-           // document.getElementById("goal").innerHTML = choice + " in the box!";
-	    document.getElementById(name).style.opacity = 0; 
-	   
+          //document.getElementById("goal").innerHTML = choice + " in the box!";
 	    if (result.length == 1) {
-		 document.getElementById("destinationImg").src = "image/robot1.png";
+		document.getElementById("arrow").style.opacity = 0;
+		document.getElementById("destination1").style.opacity = 0;
+		document.getElementById("destination2").style.opacity = 0;
+
+		if (alldone < 1) {
+			alert ("You are correct!");
+			alldone = 1;
+			document.getElementById("finish").style.display = "inline";
+		}
 	    }
-	    else if (result.length == 2) {
-		 document.getElementById("destinationImg").src = "image/robot2.png";
-	    }
-      	    else if (result.length == 3) {
-		 document.getElementById("destinationImg").src = "image/robot3.png";
-		 document.getElementById("finish").style.display = "inline";
-	    }
-	   
+
             var check = false; 
             for (i = 0; i < result.length; i ++){
                 if (result[i] == choice){
@@ -143,12 +124,11 @@ function touchmove(event){
         }
     }
     else{
-       // document.getElementById("goal").innerHTML = choice + " out of the box!";
+       //document.getElementById("goal").innerHTML = choice + " out of the box!";
         remove(choice);
         result.sort();
     }
 
-   document.getElementById("debug1").innerHTML = result.length;
    event.preventDefault();
 }
 
@@ -161,7 +141,6 @@ function checkAnswer(){
         topic.publish(message);
         */
         alert("correct");
-	document.getElementById("finish").style.display = block;
 
     }
     else{
