@@ -167,7 +167,7 @@ var questions = [{
 	var ros = new ROSLIB.Ros({
 	//Use the localhost one if running in on the laptop only
 	//Use the local IP if accessing it from tablet
-	url : 'ws://192.168.7.244:9090'
+	url : 'ws://192.168.7.194:9090'
 	});
 
 	ros.on('connection',function(){
@@ -334,9 +334,14 @@ var questions = [{
     
     var numCorrect = 0;
     
+    var m  = 'Questionnaire answers,' + selections[0]
+    for (var i = 1; i < selections.length; i++) {
+    	m = m + ',' + selections[i]
+    }
     var message = new ROSLIB.Message({
 	  //data: selections[0] + ',' + selections[1] + ',' + selections[2] + ',' + selections[3] + ',' + selections[4]
-	  data: 'end'
+	  //data: 'end'
+	  data: m
 	});
 
     main_topic.publish(message);
@@ -361,7 +366,7 @@ var questions = [{
 
   function start_questionnaire() {
   	var message = new ROSLIB.Message({
-		data: "Starting Pre-Study Questionnaire"
+		data: "Start questionnaire"
 	});
 
 	main_topic.publish(message);

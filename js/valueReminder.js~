@@ -44,7 +44,7 @@ function setup(){
 function start_breathing(){
 
 	var message = new ROSLIB.Message({
-		data: "Value reminder"
+		data: "Start value reminder"
 	});
 
 	main_topic.publish(message);
@@ -142,8 +142,12 @@ function count_breathing1() {
 		
 	}	
 
-	if (breath >= 5) {
+	if (breath >= 3) {
 		document.getElementById("next").style.visibility = "visible";
+		var message = new ROSLIB.Message({
+			data: "Value finished"
+		});
+		main_topic.publish(message);
 	}
 }
 
@@ -160,8 +164,12 @@ function count_breathing2() {
 		main_topic.publish(message);
 	}
 
-	if (breath >= 5) {
+	if (breath >= 3) {
 		document.getElementById("next").style.visibility = "visible";
+		var message = new ROSLIB.Message({
+			data: "Value finished"
+		});
+		main_topic.publish(message);
 	}
 }
 
@@ -178,8 +186,12 @@ function count_breathing3() {
 		main_topic.publish(message);
 	}
 
-	if (breath >= 5) {
+	if (breath >= 3) {
 		document.getElementById("next").style.visibility = "visible";
+		var message = new ROSLIB.Message({
+			data: "Value finished"
+		});
+		main_topic.publish(message);
 	}
 }
 
@@ -196,8 +208,12 @@ function count_breathing4() {
 		main_topic.publish(message);
 	}
 
-	if (breath >= 5) {
+	if (breath >= 3) {
 		document.getElementById("next").style.visibility = "visible";
+		var message = new ROSLIB.Message({
+			data: "Value finished"
+		});
+		main_topic.publish(message);
 	}
 }
 
@@ -214,7 +230,11 @@ function count_breathing5() {
 		main_topic.publish(message);
 	}
 
-	if (breath >= 5) {
+	if (breath >= 3) {
 		document.getElementById("next").style.visibility = "visible";
+		var message = new ROSLIB.Message({
+			data: "Value finished"
+		});
+		main_topic.publish(message);
 	}
 }

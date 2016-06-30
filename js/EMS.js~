@@ -12,7 +12,7 @@ function setup(){
 		//Use the local IP if accessing it from tablet
 		
 		//url: 'ws://192.168.0.21:9090'
-		url: 'ws://192.168.7.194:9090'
+		url: 'ws://192.168.5.52:9090'
 		//url: 'ws://localhost:9090'
 		//url: 'ws://10.120.114.241:9090'
 		//url: 'ws://172.20.10.3:9090'
@@ -43,7 +43,7 @@ function setup(){
 function start_painRate(){
 
 	var message = new ROSLIB.Message({
-		data: "Start EMS"
+		data: "Starting EMS"
 	});
 
 	main_topic.publish(message);
@@ -55,7 +55,7 @@ function negative() {
 	EMS_rate = 1;
 	console.log('pain rate: ' + EMS_rate);
 	var modal = document.getElementById('myModal');
-	//modal.style.display = "none";	
+	modal.style.display = "none";	
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
@@ -71,7 +71,7 @@ function neutral() {
 	EMS_rate = 2;
 	console.log('pain rate: ' + EMS_rate);
 	var modal = document.getElementById('myModal');
-	//modal.style.display = "none";		
+	modal.style.display = "none";		
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
@@ -87,7 +87,7 @@ function positive() {
 	EMS_rate = 3;
 	console.log('pain rate: ' + EMS_rate);
 	var modal = document.getElementById('myModal');
-	//modal.style.display = "none";	
+	modal.style.display = "none";	
 	document.getElementById("next").style.display = "block";
 
 	var message = new ROSLIB.Message({

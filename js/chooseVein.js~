@@ -44,7 +44,7 @@ function setup(){
 function start_chooseVein(){
 
 	var message = new ROSLIB.Message({
-		data: "START Coping Strategy 2: Education Step 1: Choose Vein"
+		data: "Start CS2-ES1-Vein"
 	});
 
 	main_topic.publish(message);
@@ -53,5 +53,10 @@ function start_chooseVein(){
 function display_next() {
 
 	document.getElementById("next").style.visibility = "visible";
+	var message = new ROSLIB.Message({
+		data: "vein chosen"
+	});
+
+	main_topic.publish(message);
 
 }

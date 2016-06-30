@@ -43,7 +43,7 @@ function setup(){
 function start_painRate(){
 
 	var message = new ROSLIB.Message({
-		data: "Start pain anxiety"
+		data: "Start pain anxiety 2"
 	});
 
 	main_topic.publish(message);

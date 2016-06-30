@@ -43,7 +43,7 @@ function setup(){
 function start_painRate(){
 
 	var message = new ROSLIB.Message({
-		data: "Starting EMS"
+		data: "Start EMS"
 	});
 
 	main_topic.publish(message);
@@ -59,7 +59,7 @@ function negative() {
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
-		data: "EMS: bad"
+		data: "EMS-bad"
 	});
 
 	main_topic.publish(message);
@@ -75,7 +75,7 @@ function neutral() {
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
-		data: "EMS: average"
+		data: "EMS-average"
 	});
 
 	main_topic.publish(message);
@@ -91,7 +91,7 @@ function positive() {
 	document.getElementById("next").style.display = "block";
 
 	var message = new ROSLIB.Message({
-		data: "EMS: good"
+		data: "EMS-good"
 	});
 
 	main_topic.publish(message);

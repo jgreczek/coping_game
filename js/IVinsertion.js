@@ -119,7 +119,7 @@ function touchmove(e) {
 function start_insertion(){
 
 	var message = new ROSLIB.Message({
-		data: "START Coping Strategy 2: Education Step 3: IV Insertion"
+		data: "Start CS2-ES3-Insertion"
 	});
 
 	main_topic.publish(message);
@@ -128,5 +128,10 @@ function start_insertion(){
 function display_next() {
 
 	document.getElementById("next").style.visibility = "visible";
+	var message = new ROSLIB.Message({
+		data: "Insertion finished"
+	});
+
+	main_topic.publish(message);
 
 }

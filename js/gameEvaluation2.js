@@ -5,7 +5,6 @@ var main_topic;
 window.onload = setup;
 
 function setup(){
-	
 
 	//Make sure to change the IP
 	var ros = new ROSLIB.Ros({
@@ -38,25 +37,63 @@ function setup(){
 
 	});
 
-	start_chooseVein();
+	start_painRate();
 }
 
-function start_chooseVein(){
+function start_painRate(){
 
 	var message = new ROSLIB.Message({
-		data: "Start CS2-ES1-Vein"
+		data: "Start EMS 2"
 	});
 
 	main_topic.publish(message);
 } 
 
-function display_next() {
-
-	document.getElementById("next").style.visibility = "visible";
+var EMS_rate;
+function negative() {
+	
+	EMS_rate = 1;
+	console.log('pain rate: ' + EMS_rate);
+	var modal = document.getElementById('myModal');
+	//modal.style.display = "none";	
+	document.getElementById("next").style.display = "block";
+	
 	var message = new ROSLIB.Message({
-		data: "vein chosen"
+		data: "EMS-bad2"
 	});
 
 	main_topic.publish(message);
-
 }
+
+
+function neutral() {
+
+	EMS_rate = 2;
+	console.log('pain rate: ' + EMS_rate);
+	var modal = document.getElementById('myModal');
+	//modal.style.display = "none";		
+	document.getElementById("next").style.display = "block";
+	
+	var message = new ROSLIB.Message({
+		data: "EMS-average2"
+	});
+
+	main_topic.publish(message);
+}
+
+
+function positive() {
+
+	EMS_rate = 3;
+	console.log('pain rate: ' + EMS_rate);
+	var modal = document.getElementById('myModal');
+	//modal.style.display = "none";	
+	document.getElementById("next").style.display = "block";
+
+	var message = new ROSLIB.Message({
+		data: "EMS-good2"
+	});
+
+	main_topic.publish(message);
+}
+

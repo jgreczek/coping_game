@@ -1,7 +1,7 @@
 <html>
 <head>
 	<script type="text/javascript"></script>
-	<script src ="js/FACES.js"></script>
+	<script src ="js/FACES2.js"></script>
 	<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
 		<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
 	<link rel ="stylesheet" href="css/FACES.css">
@@ -23,7 +23,7 @@
 		 <li><input id = "emoj3" type = "image" src = "image/emoj-3.png" alt = "emoj-3" onClick = "pain_rate3()"/>
 		 <li><input id = "emoj4" type = "image" src = "image/emoj-4.png" alt = "emoj-4" onClick = "pain_rate4()"/>
 		 <li><input id = "emoj5" type = "image" src = "image/emoj-5.png" alt = "emoj-5" onClick = "pain_rate5()"/>
-		 <li><input id = "next" type ="image" src = "image/next.png" alt = "next" onClick = "document.location.href = 'breathing.html'"/>
+		 <li><input id = "next" type ="image" src = "image/next.png" alt = "next" onClick = "document.location.href = 'end.html'"/>
 		 <!-- <li><input id = "emoj6" type = "image" src = "image/emoj-6.png" alt = "emoj-6" onClick = "pain_rate6()"/> -->
 	    </ul>    
 	    </div>

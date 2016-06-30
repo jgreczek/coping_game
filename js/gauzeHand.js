@@ -51,7 +51,7 @@ function setup(){
 function start_gauzeWrap(){
 
 	var message = new ROSLIB.Message({
-		data: "START Coping Strategy 4: Education Step 4: Wrap Gauze"
+		data: "Start CS2-ES4-Gauze"
 	});
 
 	main_topic.publish(message);
@@ -125,5 +125,10 @@ function touchmove(event) {
 function display_next() {
 
 	document.getElementById("next").style.visibility = "visible";
+	var message = new ROSLIB.Message({
+		data: "Gauze finished"
+	});
+
+	main_topic.publish(message);
 
 }

@@ -44,7 +44,7 @@ function setup(){
 function start_coldSpray(){
 
 	var message = new ROSLIB.Message({
-		data: "START Coping Strategy 2: Education Step 2: Cold Spray"
+		data: "Start CS2-ES2-Spray"
 	});
 
 	main_topic.publish(message);
@@ -180,5 +180,11 @@ function onmousemove(ev) {
 function display_next() {
 
 	document.getElementById("next_spray").style.visibility = "visible";
+	var message = new ROSLIB.Message({
+		data: "spray finished"
+	});
 
+	main_topic.publish(message);
 }
+
+
