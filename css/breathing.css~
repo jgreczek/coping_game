@@ -27,6 +27,20 @@ body {
 	margin-left: 0px;
 }
 
+#pressedbutton {
+	position: absolute;
+	width: 369px;
+	height: 268px;
+	margin-top: 480px;
+	margin-left: 435px;
+	background: url("../image/button-pressed.png") no-repeat;
+	
+	-webkit-transition: 2s ease-in-out;
+    -moz-transition: 2s ease-in-out;
+    -o-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
+}
+
 #inflatebutton {
 	position: absolute;
 	width: 369px;

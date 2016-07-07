@@ -1,0 +1,29 @@
+
+body {
+	font-family: Open Sans;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 140px;
+}
+
+.big{ width: 3em; height: 3em; }
+
+.end-bg {
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-image: url("../image/background.png");
+	background-repeat: repeat;
+}
+
+#next{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: 340px;
+	margin-left: 540px;
+}
