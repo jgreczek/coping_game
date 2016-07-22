@@ -49,10 +49,6 @@ body {
 	margin-left: 435px;
 	background: url("../image/button.png") no-repeat;
 	
-	-webkit-transition: 2s ease-in-out;
-    -moz-transition: 2s ease-in-out;
-    -o-transition: 2s ease-in-out;
-    transition: 2s ease-in-out;
 }
 
 #balloon {
@@ -69,7 +65,7 @@ body {
     transition: 2s ease-in-out;
 }
 
-#inflatebutton:active + #balloon {
+#inflatebutton:hover + #balloon {
 	-webkit-transform: scale(2,2);
     -moz-transform: scale(2,2);
     -o-transform: scale(2,2);
@@ -77,6 +73,10 @@ body {
     transform: scale(2,2);
     transform-origin: center;
 	
+}
+
+#inflatebutton:active {
+	background: url("../image/button-pressed.png") no-repeat;	
 }
 
 #next{

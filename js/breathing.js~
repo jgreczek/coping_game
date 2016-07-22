@@ -64,12 +64,25 @@ function count_breathing() {
 	main_topic.publish(message);
 
 	if (breath >= 2) {
-		document.getElementById("next").style.visibility = "visible";
-
-		var message = new ROSLIB.Message({
-			data: "Breath finished"
-		});
-
-		main_topic.publish(message);
+		jump_next();
 	}
+}
+
+function jump_next() {
+	document.getElementById("next").style.visibility = "visible";
+
+	var message = new ROSLIB.Message({
+		data: "Breath finished"
+	});
+
+	main_topic.publish(message);
+}
+function jump_next() {
+	document.getElementById("next").style.visibility = "visible";
+
+	var message = new ROSLIB.Message({
+		data: "Breath finished"
+	});
+
+	main_topic.publish(message);
 }

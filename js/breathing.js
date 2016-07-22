@@ -77,3 +77,12 @@ function jump_next() {
 
 	main_topic.publish(message);
 }
+function jump_next() {
+	document.getElementById("next").style.visibility = "visible";
+
+	var message = new ROSLIB.Message({
+		data: "Breath finished"
+	});
+
+	main_topic.publish(message);
+}

@@ -15,7 +15,7 @@
 		<div id = "balloon"></div>
 		
 		<div id = "next" style="visibility: hidden">
-			<a href = "chooseVein.html"><img src = "image/next.png" alt = "click to continue"/> 
+			<a href = "gameEvaluation.html"><img src = "image/next.png" alt = "click to continue"/> 
 		</div>
 	</body>
 </html>
