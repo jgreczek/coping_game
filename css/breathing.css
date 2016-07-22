@@ -24,21 +24,21 @@ body {
 	width: 1280px;
 	height: 800px;
 	margin-top: 0px;
-	margin-left: 0px;
+	margin-left: -200px;
 }
 
-#pressedbutton {
+#inflate2 {
 	position: absolute;
 	width: 369px;
 	height: 268px;
 	margin-top: 480px;
-	margin-left: 435px;
-	background: url("../image/button-pressed.png") no-repeat;
+	margin-left: 535px;
+	background: url("../image/button-2.png") no-repeat;
 	
-	-webkit-transition: 2s ease-in-out;
-    -moz-transition: 2s ease-in-out;
-    -o-transition: 2s ease-in-out;
-    transition: 2s ease-in-out;
+}
+
+#inflate2:active {
+	background: url("../image/button-pressed2.png") no-repeat;	
 }
 
 #inflatebutton {
@@ -46,7 +46,7 @@ body {
 	width: 369px;
 	height: 268px;
 	margin-top: 480px;
-	margin-left: 435px;
+	margin-left: 235px;
 	background: url("../image/button.png") no-repeat;
 	
 }
@@ -56,7 +56,7 @@ body {
 	width: 283px;
 	height: 242px;
 	margin-top: 180px;
-	margin-left: 480px;
+	margin-left: 280px;
 	background: url("../image/balloon.png") no-repeat;
 	
 	-webkit-transition: 2s ease-in-out;
