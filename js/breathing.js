@@ -51,19 +51,32 @@ function start_breathing(){
 	main_topic.publish(message);
 } 
 
-var breath = 0;
+var breath_in = 0;
 function count_breathing() {
 
-	breath = breath + 1;
-	console.log(breath);
+	breath_in = breath_in + 1;
+	console.log(breath_in);
 	
 	var message = new ROSLIB.Message({
-		data: "Breath taken"
+		data: "Breath In"
+	});
+
+	main_topic.publish(message);
+}
+
+var breath_out = 0;
+function count_breathing2() {
+
+	breath_out = breath_out + 1;
+	console.log(breath_out);
+	
+	var message = new ROSLIB.Message({
+		data: "Breath Out"
 	});
 
 	main_topic.publish(message);
 
-	if (breath >= 2) {
+	if (breath_out >= 2) {
 		jump_next();
 	}
 }
@@ -77,12 +90,4 @@ function jump_next() {
 
 	main_topic.publish(message);
 }
-function jump_next() {
-	document.getElementById("next").style.visibility = "visible";
 
-	var message = new ROSLIB.Message({
-		data: "Breath finished"
-	});
-
-	main_topic.publish(message);
-}
