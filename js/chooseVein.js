@@ -53,6 +53,7 @@ function start_chooseVein(){
 function display_next() {
 
 	document.getElementById("next").style.visibility = "visible";
+	document.getElementById("chosenCorrectVein").style.visibility = "visible";
 	var message = new ROSLIB.Message({
 		data: "vein chosen"
 	});

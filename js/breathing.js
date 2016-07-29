@@ -58,7 +58,7 @@ function count_breathing() {
 	console.log(breath_in);
 	
 	var message = new ROSLIB.Message({
-		data: "Breath In"
+		data: "Breath in"
 	});
 
 	main_topic.publish(message);
@@ -71,7 +71,7 @@ function count_breathing2() {
 	console.log(breath_out);
 	
 	var message = new ROSLIB.Message({
-		data: "Breath Out"
+		data: "Breath out"
 	});
 
 	main_topic.publish(message);

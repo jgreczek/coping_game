@@ -33,12 +33,12 @@ body {
 	height: 268px;
 	margin-top: 480px;
 	margin-left: 535px;
-	background: url("../image/button-2.png") no-repeat;
+	background: url("../image/button-red.png") no-repeat;
 	
 }
 
 #inflate2:active {
-	background: url("../image/button-pressed2.png") no-repeat;	
+	background: url("../image/button-red-pressed.png") no-repeat;	
 }
 
 #inflatebutton {

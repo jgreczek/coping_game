@@ -58,24 +58,25 @@ function count_breathing() {
 	console.log(breath_in);
 	
 	var message = new ROSLIB.Message({
-		data: "Breath In"
+		data: "Breath in"
 	});
 
 	main_topic.publish(message);
 }
 
+var breath_out = 0;
 function count_breathing2() {
 
-	breath = breath + 1;
-	console.log(breath);
+	breath_out = breath_out + 1;
+	console.log(breath_out);
 	
 	var message = new ROSLIB.Message({
-		data: "Breath Out"
+		data: "Breath out"
 	});
 
 	main_topic.publish(message);
 
-	if (breath >= 2) {
+	if (breath_out >= 2) {
 		jump_next();
 	}
 }
