@@ -109,7 +109,7 @@ function touchmove(e) {
 	e.target.style.top = (touch.pageY) - 400 + 'px';
 
 	//880 980 , 300 600
-	if (touch.pageX > 880 && touch.pageX < 980 && touch.pageY > 300 && touch.pageY < 310) {
+	if (touch.pageX > 880 && touch.pageX < 950 && touch.pageY > 320 && touch.pageY < 330) {
 		display_next();
 		needle.removeEventListener('touchmove', touchmove, false);
 		allowClick = false;
