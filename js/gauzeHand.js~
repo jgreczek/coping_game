@@ -4,6 +4,7 @@ var choice;
 var result = [];
 var w; 
 var h;
+var count = 0; //added by Xuan 8.3
 
 // connexting to ROS
 window.onload = setup;
@@ -104,8 +105,13 @@ function touchmove(event) {
 			}
 			else if (result.length == 3) {
 				 document.getElementById("armImg").src = "image/arm-gauze-3.png";
-				 display_next();
-			}
+				 //added by Xuan 8.3 thread lock for listener
+				 count = count + 1;
+				 if (count == 1) {
+				 	display_next();
+				 }
+				 //------------------------------------------
+			}	
 		
 			var check = false; 
 			for (i = 0; i < result.length; i ++){
