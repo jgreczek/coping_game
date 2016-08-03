@@ -65,7 +65,7 @@ body {
     transition: 2s ease-in-out;
 }
 
-#inflatebutton:hover + #balloon {
+#inflatebutton:active + #balloon {
 	-webkit-transform: scale(2,2);
     -moz-transform: scale(2,2);
     -o-transform: scale(2,2);
@@ -86,3 +86,5 @@ body {
 	margin-top: 540px;
 	margin-left: 940px;
 }
+
+

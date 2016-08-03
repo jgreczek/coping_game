@@ -2,7 +2,7 @@
 
 #next{
     margin-left: 450px;
-    margin-top: -150px;
+    margin-top: -70px;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     display: none;
@@ -75,11 +75,10 @@
 .modal-body li{
 	display: inline-block;
 	text-decoration: none;
-	padding-left: 6px;
-	padding-top: 50px;
+	padding-left: 16px;
 	height: 280px;
 	width: 220px;
-	margin-left: 20px;
+	margin-top: 5px;
 }
 
 .modal-footer {

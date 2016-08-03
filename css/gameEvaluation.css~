@@ -1,11 +1,21 @@
 /* The Modal (background) */
 
-#next {
-    margin-left: 500px;
-    margin-top: 200px; 
+#next{
+    margin-left: 450px;
+    margin-top: -70px;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     display: none;
+}
+
+/* This is the background that goes behind the question container box. */
+.questions-bg {
+	width: 1280px;
+	height: 800px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-image: url("../image/background-questions.png");
+	background-repeat: repeat;
 }
 
 .modal {
@@ -58,15 +68,17 @@
 
 .modal-body {
 	padding: 10px ;
+	height: 250px;
 	background-color: black;
 }
 
 .modal-body li{
 	display: inline-block;
 	text-decoration: none;
-	padding-left: 20px;
+	padding-left: 16px;
 	height: 280px;
 	width: 220px;
+	margin-top: 5px;
 }
 
 .modal-footer {

@@ -1,15 +1,30 @@
-body {
+/*body {
     font-family: Open Sans;
+}*/
+
+@font-face {
+	font-family: 'laCartoonerie';
+	src: url('laCartoonerie.eot');
+	src: local('laCartoonerie'), url('laCartoonerie.woff') format('woff'), url('laCartoonerie.ttf') format('truetype');
 }
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1396">Text with this font applied</p> */
+.fontsforweb_fontid_1396 {
+	font-family: 'laCartoonerie' !important;
+}
+
+body {
+	font-family: 'laCartoonerie';
+}
+
 
 h1 {
     text-align: center;
 }
 
-.big{ width: 2em; height: 2em; }
+.big{ width: 3em; height: 3em; }
 
 #title {
-    /* text-decoration: underline; */
+    padding-top: 30px;
 }
 
 /* This is the display for the quiz questions and answers text. */
@@ -30,7 +45,7 @@ h1 {
 }
 
 /* This is the button style for the Next and Prev buttons. */
-.button {
+/*.button {
     border:4px solid;
     border-radius:5px;
     width: 90px;
@@ -58,6 +73,20 @@ button {
 .button a {
     text-decoration: none;
     color: black;
+}*/
+
+#next {
+	position: relative;
+	margin-top: -90px;
+	margin-left: 900px;
+}
+
+/* These are the buttons that are initially set to invisible. */
+#prev {
+	display:none;
+	position: relative;
+	margin-top: -200px;
+	margin-left: 150px;
 }
 
 /* This is the container where questions are displayed. */
@@ -66,13 +95,12 @@ button {
     margin:auto;
     margin-top: 90px;
     padding: 0 25px 140px 25px;
-    background-color: #1E90FF;
-    border:4px solid #B0E0E6;
-    border-radius:5px;
-    color: #FFFFFF;
+    background-color: #ccffff;
+    color: black;
     font-size: 24px;
     font-weight: bold;
-    box-shadow: 5px 5px 5px #888;
+    font-family: 'laCartoonerie'
+    height: absolute;
 }
 
 ul {
@@ -87,14 +115,4 @@ li {
         margin: 100px;
 	display:inline;
 	font-size: 36px;
-}
-
-/* These are the buttons that are initially set to invisible. */
-#prev {
-    display:none;
-}
-
-#start {
-    display:none;
-    width: 90px;
 }

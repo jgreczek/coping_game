@@ -3,7 +3,6 @@ var main_topic;
 
 //Connecting to ROS
 window.onload = setup;
-//$('inflatebutton').bind('click', ClickFunction ).bind('tap', ClickFunction );
 
 function setup(){
 	
@@ -45,39 +44,26 @@ function setup(){
 function start_breathing(){
 
 	var message = new ROSLIB.Message({
-		data: "Start CS1-Breathing"
+		data: "START Coping Strategy 1: Breathing"
 	});
 
 	main_topic.publish(message);
 } 
 
-var breath_in = 0;
+var breath = 0;
 function count_breathing() {
 
-	breath_in = breath_in + 1;
-	console.log(breath_in);
+	breath = breath + 1;
+	console.log(breath);
 	
 	var message = new ROSLIB.Message({
-		data: "Breath in"
-	});
-
-	main_topic.publish(message);
-}
-
-var breath_out = 0;
-function count_breathing2() {
-
-	breath_out = breath_out + 1;
-	console.log(breath_out);
-	
-	var message = new ROSLIB.Message({
-		data: "Breath out"
+		data: "Breath taken"
 	});
 
 	main_topic.publish(message);
 
-	if (breath_out >= 2) {
-		jump_next();
+	if (breath >= 2) {
+		document.getElementById("next").style.visibility = "visible";
 	}
 }
 
