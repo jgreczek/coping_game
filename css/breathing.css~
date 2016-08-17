@@ -34,7 +34,6 @@ body {
 	margin-top: 480px;
 	margin-left: 535px;
 	background: url("../image/button-red.png") no-repeat;
-	
 }
 
 #inflate2:active {

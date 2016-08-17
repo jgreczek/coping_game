@@ -44,7 +44,7 @@ function setup(){
 function start_breathing(){
 
 	var message = new ROSLIB.Message({
-		data: "START Coping Strategy 1: Breathing"
+		data: "Start CS1-Breathing"
 	});
 
 	main_topic.publish(message);
@@ -57,19 +57,26 @@ function count_breathing() {
 	console.log(breath);
 	
 	var message = new ROSLIB.Message({
-		data: "Breath taken"
+		data: "Breath in"
 	});
 
 	main_topic.publish(message);
 
 	if (breath >= 2) {
 		document.getElementById("next").style.visibility = "visible";
+		jump_next();
 	}
 }
 
-function jump_next() {
-	document.getElementById("next").style.visibility = "visible";
+function count_breathing2() {
+	var message = new ROSLIB.Message({
+		data: "Breath out"
+	});
 
+	main_topic.publish(message);
+}
+
+function jump_next() {
 	var message = new ROSLIB.Message({
 		data: "Breath finished"
 	});
