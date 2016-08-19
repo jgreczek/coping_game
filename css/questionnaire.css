@@ -89,6 +89,14 @@ button {
 	margin-left: 150px;
 }
 
+/* This is for showing the "next" button at the end of the questionnaire*/
+#finish {
+   display:none;
+   position:relative;
+   margin-top: -90px;
+   margin-left: 550px;
+}
+
 /* This is the container where questions are displayed. */
 #container {
     width:75%;

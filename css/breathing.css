@@ -36,9 +36,11 @@ body {
 	background: url("../image/button-red.png") no-repeat;
 }
 
+/*
 #inflate2:active {
 	background: url("../image/button-red-pressed.png") no-repeat;	
 }
+*/
 
 #inflatebutton {
 	position: absolute;
@@ -74,9 +76,11 @@ body {
 	
 }
 
+/*
 #inflatebutton:active {
 	background: url("../image/button-pressed.png") no-repeat;	
 }
+*/
 
 #next{
 	position: absolute;

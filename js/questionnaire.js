@@ -321,7 +321,9 @@ var questions = [{
 	quiz.append(scoreElem).fadeIn();
 	$('#next').hide();
 	$('#prev').hide();
-	$('#finish').show();
+	//$('#finish').show();
+	document.getElementById("finish").style.display = "block";
+	document.getElementById("instruction").style.display = "none";
 	
       }
     });

@@ -167,7 +167,7 @@ var questions = [{
 	var ros = new ROSLIB.Ros({
 	//Use the localhost one if running in on the laptop only
 	//Use the local IP if accessing it from tablet
-	url : 'ws://192.168.7.194:9090'
+	url : 'ws://192.168.7.22:9090'
 	});
 
 	ros.on('connection',function(){

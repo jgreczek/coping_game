@@ -53,7 +53,7 @@ function prepare(){
     //connecting to ROS
     ros = new ROSLIB.Ros({
         //url : 'ws://ice_newt:9090'
-        url : 'ws://192.168.7.194:9090'
+        url : 'ws://192.168.7.22:9090'
     });
 
     ros.on('connection', function(){
