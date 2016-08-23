@@ -74,21 +74,21 @@ function touchmove(event) {
 	var name = event.target.id;
 	choice = name; //varaible to keep track of the object id that is held
 
-	var xmin = 782 + 'px'; 
+	var xmin = 300 + 'px'; 
 	var xmax = 999 + 'px';
-	var ymin = 140 + 'px';
-	var ymax = 450 + 'px';	
+	var ymin = 100 + 'px';
+	var ymax = 700 + 'px';	
 
 	if (name == "gauze1") {
 		event.target.style.left = (touch.pageX) + 'px';
 		event.target.style.top = (touch.pageY) + 'px';
 	}
 	else if (name == "gauze2") {
-		event.target.style.left = (touch.pageX) - 280 + 'px';
+		event.target.style.left = (touch.pageX) - 300  + 'px';
 		event.target.style.top = (touch.pageY) + 'px';
 	}
 	else if (name == "gauze3") {
-		event.target.style.left = (touch.pageX) - 480 + 'px';
+		event.target.style.left = (touch.pageX) - 500 + 'px';
 		event.target.style.top = (touch.pageY) + 'px';
 	}
 	
