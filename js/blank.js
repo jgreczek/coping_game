@@ -1,6 +1,9 @@
+var ros;
 var main_topic;
+
 //Connecting to ROS
 window.onload = setup;
+//$('inflatebutton').bind('click', ClickFunction ).bind('tap', ClickFunction );
 
 function setup(){
 	
@@ -11,7 +14,7 @@ function setup(){
 		//Use the local IP if accessing it from tablet
 		
 		//url: 'ws://192.168.0.21:9090'
-		url: 'ws://192.168.7.22:9090'
+		url: 'ws://192.168.5.159:9090'
 		//url: 'ws://localhost:9090'
 		//url: 'ws://10.120.114.241:9090'
 		//url: 'ws://172.20.10.3:9090'
@@ -36,17 +39,25 @@ function setup(){
 
 	});
 
-	start_index();
-
+	start_blank();
+	timer();
 }
 
-function start_index() {
-	
+function start_blank(){
+
 	var message = new ROSLIB.Message({
-		data: "On main menu"
+		data: "Start blank page coping"
 	});
 
 	main_topic.publish(message);
 }
 
+function timer() {
+	window.setTimeout(show_next, 15000);
+	
+}
+
+function show_next() {
+	document.getElementById("next").style.display = "block";
+} 
 

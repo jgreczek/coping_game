@@ -10,7 +10,7 @@
 
 #next{
     margin-left: 500px;
-    margin-top: 200px;
+     margin-top: -10px;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     display: none;

@@ -43,23 +43,23 @@ function setup(){
 function start_painRate(){
 
 	var message = new ROSLIB.Message({
-		data: "Start EMA"
+		data: "Start EMS"
 	});
 
 	main_topic.publish(message);
 } 
 
-var EMA_rate;
+var EMS_rate;
 function negative() {
 	
-	EMA_rate = 1;
-	console.log('pain rate: ' + EMA_rate);
+	EMS_rate = 1;
+	console.log('pain rate: ' + EMS_rate);
 	var modal = document.getElementById('myModal');
-	//modal.style.display = "none";	
+	modal.style.display = "none";	
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
-		data: "EMA-bad"
+		data: "EMS-bad"
 	});
 
 	main_topic.publish(message);
@@ -68,14 +68,14 @@ function negative() {
 
 function neutral() {
 
-	EMA_rate = 2;
-	console.log('pain rate: ' + EMA_rate);
+	EMS_rate = 2;
+	console.log('pain rate: ' + EMS_rate);
 	var modal = document.getElementById('myModal');
-	//modal.style.display = "none";		
+	modal.style.display = "none";		
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
-		data: "EMA-average"
+		data: "EMS-average"
 	});
 
 	main_topic.publish(message);
@@ -84,14 +84,14 @@ function neutral() {
 
 function positive() {
 
-	EMA_rate = 3;
-	console.log('pain rate: ' + EMA_rate);
+	EMS_rate = 3;
+	console.log('pain rate: ' + EMS_rate);
 	var modal = document.getElementById('myModal');
-	//modal.style.display = "none";	
+	modal.style.display = "none";	
 	document.getElementById("next").style.display = "block";
 
 	var message = new ROSLIB.Message({
-		data: "EMA-good"
+		data: "EMS-good"
 	});
 
 	main_topic.publish(message);

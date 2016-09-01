@@ -16,7 +16,7 @@ function setup(){
 		//Use the local IP if accessing it from tablet
 		
 		//url: 'ws://192.168.0.21:9090'
-		url: 'ws://192.168.7.22:9090'
+		url: 'ws://192.168.5.159:9090'
 		//url: 'ws://localhost:9090'
 		//url: 'ws://10.120.114.241:9090'
 		//url: 'ws://172.20.10.3:9090'
@@ -74,12 +74,30 @@ function divMove(e){
 	var newY = e.clientY - 400;
 	div.style.top = newY + 'px';
 	div.style.left = newX + 'px';
-	
-	if (e.clientX > 880 && e.clientX < 980 && e.clientY > 300 && e.clientY < 400) {
-		display_next();
-		window.removeEventListener('mousemove', divMove, true);
-		allowClick = false;
-	}
+
+	console.log("x coord: " + e.clientX );
+	console.log("y coord: " + e.clientY );
+
+	var found = false;	
+	var i = 0;
+
+		// inhibit area
+		// x > 1037 && x < 1210 , y > -5 && y < 40
+
+		if (e.clientX > 1037 && e.clientX < 1210) 
+		{
+			window.removeEventListener('mousemove', divMove, true);
+			window.removeEventListener('mousemove', divMove, false);
+		}
+		else {
+			if (e.clientX > 880 && e.clientX < 980 && e.clientY > 300 && e.clientY < 400) 	
+			{
+				display_next();
+				window.removeEventListener('mousemove', divMove, true);
+				allowClick = false;
+				found = true;
+			}
+		} 
 }
 
 // for touch (tablet)
@@ -90,7 +108,7 @@ function addListeners_touch(){
 	h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
 	var needle = document.getElementById('needle');
-	needle.style.left 
+	//needle.style.left 
 
 	var touch_listener = document.getElementById('needle');
 	touch_listener.addEventListener('touchmove', touchmove, false);
@@ -107,13 +125,30 @@ function touchmove(e) {
 
 	e.target.style.left = (touch.pageX) - 700 + 'px';
 	e.target.style.top = (touch.pageY) - 400 + 'px';
+	var i = 0;
 
-	//880 980 , 300 600
+	/*//880 980 , 300 600
 	if (touch.pageX > 880 && touch.pageX < 950 && touch.pageY > 320 && touch.pageY < 330) {
 		display_next();
 		needle.removeEventListener('touchmove', touchmove, false);
 		allowClick = false;
+	}*/
+
+	if (touch.pageX > 1000 && touch.pageX < 1100 ) 
+	{
+		//needle.removeEventListener('touchmove', touchmove, false);
+		document.getElementById('ouch').style.display = 'block';
+		//needle.addEventListener('touchmove', touchmove, true);		
 	}
+	else {
+		if (touch.pageX > 880 && touch.pageX < 950 && touch.pageY > 320 && touch.pageY < 400) 	
+		{
+			display_next();
+			needle.removeEventListener('touchmove', touchmove, false);
+			allowClick = false;
+		}
+	} 
+
 }
 
 function start_insertion(){

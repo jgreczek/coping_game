@@ -128,6 +128,13 @@ html{
 	background-repeat: no-repeat;
 }
 
+#ouch {
+	position: absolute;
+	display: block;
+	background-image: url("../image/ouch.png");
+	background-repeat: no-repeat;
+}
+
 /* Education Step 4: Wrap Gauze */
 
 #arm_gauze {

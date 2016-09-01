@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Blank Page</title>
+		<script src ="js/blank.js"></script>
+		<script type="text/javascript"></script>
+		<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+		<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+		<link rel="stylesheet" href="css/blank.css">
+	</head>
+	<body>
+		<html class = "end-bg">
+		<div id = "next" style="visibility: visible">
+			<a href = "FACES.html"><img src = "image/next.png" alt = "click to continue"/> 
+		</div>
+	</body>
+</html>

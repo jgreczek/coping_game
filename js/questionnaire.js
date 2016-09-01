@@ -167,7 +167,7 @@ var questions = [{
 	var ros = new ROSLIB.Ros({
 	//Use the localhost one if running in on the laptop only
 	//Use the local IP if accessing it from tablet
-	url : 'ws://192.168.7.194:9090'
+	url : 'ws://192.168.5.159:9090'
 	});
 
 	ros.on('connection',function(){
@@ -203,7 +203,7 @@ var questions = [{
     
     // Suspend click listener during fade animation
     if(quiz.is(':animated')) {        
-      return false;
+      return false;5
     }
     choose();
     
@@ -237,7 +237,7 @@ var questions = [{
     }
     //func();
     
-    document.location.href = 'FACES.html';
+    document.location.href = 'blank.html';
     //questionCounter = 0;
     //selections = [];
     //displayNext();
@@ -307,7 +307,7 @@ var questions = [{
 	}
 	
 	// Controls display of 'prev' button
-	if(questionCounter === 1){
+	if(questionCounter === 1){// also add up the score and log that separately on the next line
 	  $('#prev').show();
 	} else if(questionCounter === 0){
 	  

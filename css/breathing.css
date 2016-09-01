@@ -36,11 +36,9 @@ body {
 	background: url("../image/button-red.png") no-repeat;
 }
 
-/*
 #inflate2:active {
 	background: url("../image/button-red-pressed.png") no-repeat;	
 }
-*/
 
 #inflatebutton {
 	position: absolute;
@@ -60,10 +58,10 @@ body {
 	margin-left: 280px;
 	background: url("../image/balloon.png") no-repeat;
 	
-	-webkit-transition: 2s ease-in-out;
-    -moz-transition: 2s ease-in-out;
-    -o-transition: 2s ease-in-out;
-    transition: 2s ease-in-out;
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 #inflatebutton:active + #balloon {
@@ -76,11 +74,10 @@ body {
 	
 }
 
-/*
+
 #inflatebutton:active {
 	background: url("../image/button-pressed.png") no-repeat;	
 }
-*/
 
 #next{
 	position: absolute;

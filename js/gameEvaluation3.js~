@@ -12,7 +12,7 @@ function setup(){
 		//Use the local IP if accessing it from tablet
 		
 		//url: 'ws://192.168.0.21:9090'
-		url: 'ws://192.168.7.194:9090'
+		url: 'ws://192.168.5.159:9090'
 		//url: 'ws://localhost:9090'
 		//url: 'ws://10.120.114.241:9090'
 		//url: 'ws://172.20.10.3:9090'
@@ -43,23 +43,23 @@ function setup(){
 function start_painRate(){
 
 	var message = new ROSLIB.Message({
-		data: "Start EMS 3"
+		data: "Start EMA 3"
 	});
 
 	main_topic.publish(message);
 } 
 
-var EMS_rate;
+var EMA_rate;
 function negative() {
 	
-	EMS_rate = 1;
-	console.log('pain rate: ' + EMS_rate);
+	EMA_rate = 1;
+	console.log('pain rate: ' + EMA_rate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";	
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
-		data: "EMS-bad3"
+		data: "EMA-bad3"
 	});
 
 	main_topic.publish(message);
@@ -68,14 +68,14 @@ function negative() {
 
 function neutral() {
 
-	EMS_rate = 2;
-	console.log('pain rate: ' + EMS_rate);
+	EMA_rate = 2;
+	console.log('pain rate: ' + EMA_rate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";		
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
-		data: "EMS-average3"
+		data: "EMA-average3"
 	});
 
 	main_topic.publish(message);
@@ -84,14 +84,14 @@ function neutral() {
 
 function positive() {
 
-	EMS_rate = 3;
-	console.log('pain rate: ' + EMS_rate);
+	EMA_rate = 3;
+	console.log('pain rate: ' + EMA_rate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";	
 	document.getElementById("next").style.display = "block";
 
 	var message = new ROSLIB.Message({
-		data: "EMS-good3"
+		data: "EMA-good3"
 	});
 
 	main_topic.publish(message);
