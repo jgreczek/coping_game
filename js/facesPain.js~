@@ -44,7 +44,7 @@ function setup(){
 function start_painRate(){
 
 	var message = new ROSLIB.Message({
-		data: "Starting pain anxiety rate"
+		data: "Start pain anxiety"
 	});
 
 	main_topic.publish(message);
@@ -56,12 +56,11 @@ function pain_rate1() {
 	painRate = 1;
 	console.log('pain rate: ' + painRate);
 	var modal = document.getElementById('myModal');
-	modal.style.display = "none";
-	document.getElementById("next").style.display = "block";
-	
+	//document.getElementById("next").style.display = "block";
+	timer();
 
 	var message = new ROSLIB.Message({
-		data: "The child is feeling great"
+		data: "1-great"
 	});
 
 	main_topic.publish(message);
@@ -74,12 +73,12 @@ function pain_rate2() {
 	painRate = 2;
 	console.log('pain rate: ' + painRate);
 	var modal = document.getElementById('myModal');
-	modal.style.display = "none";
-	document.getElementById("next").style.display = "block";
-	
+	//modal.style.display = "none";
+	//document.getElementById("next").style.display = "block";
+	timer();
 
 	var message = new ROSLIB.Message({
-		data: "The child is feeling okay"
+		data: "2-okay"
 	});
 
 	main_topic.publish(message);
@@ -91,12 +90,12 @@ function pain_rate3() {
 	painRate = 3;
 	console.log('pain rate: ' + painRate);
 	var modal = document.getElementById('myModal');
-	modal.style.display = "none";
-	document.getElementById("next").style.display = "block";
-	
+	//modal.style.display = "none";
+	//document.getElementById("next").style.display = "block";
+	timer();
 
 	var message = new ROSLIB.Message({
-		data: "The child is feeling average"
+		data: "3-average"
 	});
 
 	main_topic.publish(message);
@@ -108,11 +107,12 @@ function pain_rate4() {
 	painRate = 4;
 	console.log('pain rate: ' + painRate);
 	var modal = document.getElementById('myModal');
-	modal.style.display = "none";
-	document.getElementById("next").style.display = "block";
+	//modal.style.display = "none";
+	//document.getElementById("next").style.display = "block";
+	timer();
 
 	var message = new ROSLIB.Message({
-		data: "The child is a little bit anxious"
+		data: "4-little-anxious"
 	});
 
 	main_topic.publish(message);
@@ -124,11 +124,12 @@ function pain_rate5() {
 	painRate = 5;
 	console.log('pain rate: ' + painRate);
 	var modal = document.getElementById('myModal');
-	modal.style.display = "none";
-	document.getElementById("next").style.display = "block";	
-	
+	//modal.style.display = "none";
+	//document.getElementById("next").style.display = "block";	
+	timer();
+
 	var message = new ROSLIB.Message({
-		data: "The child is anxious"
+		data: "5-anxious"
 	});
 
 	main_topic.publish(message);
@@ -140,14 +141,23 @@ function pain_rate6() {
 	painRate = 6;
 	console.log('pain rate: ' + painRate);
 	var modal = document.getElementById('myModal');
-	modal.style.display = "none";
+	//modal.style.display = "none";
 	document.getElementById("next").style.display = "block";
-	
+	timer();
+
 	var message = new ROSLIB.Message({
-		data: "The child is very anxious"
+		data: "6-very-anxious"
 	});
 
 	main_topic.publish(message);
+}
+
+function timer() {
+	window.setTimeout(show_next, 30000);	
+}
+
+function show_next() {
+	document.getElementById("next").style.display = "block";
 }
 
 // When the user clicks anywhere outside of the modal, close it

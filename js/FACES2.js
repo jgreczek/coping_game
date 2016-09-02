@@ -12,7 +12,8 @@ function setup(){
 		//Use the local IP if accessing it from tablet
 		
 		//url: 'ws://192.168.0.21:9090'
-		url: 'ws://192.168.5.159:9090'
+		//url: 'ws://192.168.5.159:9090'
+		url: 'ws://192.168.8.217:9090'
 		//url: 'ws://localhost:9090'
 		//url: 'ws://10.120.114.241:9090'
 		//url: 'ws://172.20.10.3:9090'
@@ -37,10 +38,10 @@ function setup(){
 
 	});
 
-	start_painRate();
+	start_fearRate();
 }
 
-function start_painRate(){
+function start_fearRate(){
 
 	var message = new ROSLIB.Message({
 		data: "Start pain anxiety 2"
@@ -49,14 +50,14 @@ function start_painRate(){
 	main_topic.publish(message);
 } 
 
-var painRate;
-function pain_rate1() {
+var fearRate;
+function fear_rate1() {
 	
-	painRate = 1;
-	console.log('pain rate: ' + painRate);
+	fearRate = 1;
+	console.log('fear rate: ' + fearRate);
 	var modal = document.getElementById('myModal');
-	
-	document.getElementById("next").style.display = "block";
+	//document.getElementById("next").style.display = "block";
+	timer();
 
 	var message = new ROSLIB.Message({
 		data: "1-great2"
@@ -67,14 +68,14 @@ function pain_rate1() {
 }
 
 
-function pain_rate2() {
+function fear_rate2() {
 
-	painRate = 2;
-	console.log('pain rate: ' + painRate);
+	fearRate = 2;
+	console.log('fear rate: ' + fearRate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";
-	document.getElementById("next").style.display = "block";
-	
+	//document.getElementById("next").style.display = "block";
+	timer();
 
 	var message = new ROSLIB.Message({
 		data: "2-okay2"
@@ -84,14 +85,14 @@ function pain_rate2() {
 }
 
 
-function pain_rate3() {
+function fear_rate3() {
 
-	painRate = 3;
-	console.log('pain rate: ' + painRate);
+	fearRate = 3;
+	console.log('fear rate: ' + fearRate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";
-	document.getElementById("next").style.display = "block";
-	
+	//document.getElementById("next").style.display = "block";
+	timer();
 
 	var message = new ROSLIB.Message({
 		data: "3-average2"
@@ -101,13 +102,14 @@ function pain_rate3() {
 }
 
 
-function pain_rate4() {
+function fear_rate4() {
 
-	painRate = 4;
-	console.log('pain rate: ' + painRate);
+	fearRate = 4;
+	console.log('fear rate: ' + fearRate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";
-	document.getElementById("next").style.display = "block";
+	//document.getElementById("next").style.display = "block";
+	timer();
 
 	var message = new ROSLIB.Message({
 		data: "4-little-anxious2"
@@ -117,14 +119,15 @@ function pain_rate4() {
 }
 
 
-function pain_rate5() {
+function fear_rate5() {
 
-	painRate = 5;
-	console.log('pain rate: ' + painRate);
+	fearRate = 5;
+	console.log('fear rate: ' + fearRate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";
-	document.getElementById("next").style.display = "block";	
-	
+	//document.getElementById("next").style.display = "block";	
+	timer();
+
 	var message = new ROSLIB.Message({
 		data: "5-anxious2"
 	});
@@ -133,19 +136,28 @@ function pain_rate5() {
 }
 
 
-function pain_rate6() {
+function fear_rate6() {
 
-	painRate = 6;
-	console.log('pain rate: ' + painRate);
+	fearRate = 6;
+	console.log('fear rate: ' + fearRate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";
-	document.getElementById("next").style.display = "block";
-	
+	//document.getElementById("next").style.display = "block";
+	timer();
+
 	var message = new ROSLIB.Message({
 		data: "6-very-anxious2"
 	});
 
 	main_topic.publish(message);
+}
+
+function timer() {
+	window.setTimeout(show_next, 17000);	
+}
+
+function show_next() {
+	document.getElementById("next").style.display = "block";
 }
 
 // When the user clicks anywhere outside of the modal, close it

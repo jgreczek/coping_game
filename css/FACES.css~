@@ -8,9 +8,24 @@
      display: none;
 }*/
 
+@font-face {
+	font-family: 'laCartoonerie';
+	src: url('laCartoonerie.eot');
+	src: local('laCartoonerie'), url('laCartoonerie.woff') format('woff'), url('laCartoonerie.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1396">Text with this font applied</p> */
+.fontsforweb_fontid_1396 {
+	font-family: 'laCartoonerie' !important;
+}
+
+body {
+	font-family: 'laCartoonerie';
+}
+
+
 #next{
     margin-left: 500px;
-    margin-top: 200px;
+     margin-top: -10px;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     display: none;

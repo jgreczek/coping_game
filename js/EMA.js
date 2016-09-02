@@ -12,7 +12,8 @@ function setup(){
 		//Use the local IP if accessing it from tablet
 		
 		//url: 'ws://192.168.0.21:9090'
-		url: 'ws://192.168.5.159:9090'
+		//url: 'ws://192.168.5.159:9090'
+		url: 'ws://192.168.8.217:9090'
 		//url: 'ws://localhost:9090'
 		//url: 'ws://10.120.114.241:9090'
 		//url: 'ws://172.20.10.3:9090'

@@ -43,23 +43,23 @@ function setup(){
 function start_painRate(){
 
 	var message = new ROSLIB.Message({
-		data: "Start EMS 2"
+		data: "Start EMA 2"
 	});
 
 	main_topic.publish(message);
 } 
 
-var EMS_rate;
+var EMA_rate;
 function negative() {
 	
-	EMS_rate = 1;
-	console.log('pain rate: ' + EMS_rate);
+	EMA_rate = 1;
+	console.log('pain rate: ' + EMA_rate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";	
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
-		data: "EMS-bad2"
+		data: "EMA-bad2"
 	});
 
 	main_topic.publish(message);
@@ -68,14 +68,14 @@ function negative() {
 
 function neutral() {
 
-	EMS_rate = 2;
-	console.log('pain rate: ' + EMS_rate);
+	EMA_rate = 2;
+	console.log('pain rate: ' + EMA_rate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";		
 	document.getElementById("next").style.display = "block";
 	
 	var message = new ROSLIB.Message({
-		data: "EMS-average2"
+		data: "EMA-average2"
 	});
 
 	main_topic.publish(message);
@@ -84,14 +84,14 @@ function neutral() {
 
 function positive() {
 
-	EMS_rate = 3;
-	console.log('pain rate: ' + EMS_rate);
+	EMA_rate = 3;
+	console.log('pain rate: ' + EMA_rate);
 	var modal = document.getElementById('myModal');
 	//modal.style.display = "none";	
 	document.getElementById("next").style.display = "block";
 
 	var message = new ROSLIB.Message({
-		data: "EMS-good2"
+		data: "EMA-good2"
 	});
 
 	main_topic.publish(message);

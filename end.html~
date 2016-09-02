@@ -10,7 +10,7 @@
 	<body>
 		<html class = "end-bg">
 		<div id='title'>
-				<h1>Thanks for helping me! Press 'next' button to start over.</h1>
+			<h1 class = fontsforweb_fontid_1396">Thanks for helping me! Press 'next' button to start over.</h1>
 		</div>
 		<div id = "next" style="visibility: visible">
 			<a href = "questionnaire.html"><img src = "image/next.png" alt = "click to continue"/> 
