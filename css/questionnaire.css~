@@ -21,7 +21,7 @@ h1 {
     text-align: center;
 }
 
-.big{ width: 3em; height: 3em; }
+.big{ width: 5em; height: 5em; }
 
 #title {
     padding-top: 30px;
@@ -29,7 +29,7 @@ h1 {
 
 /* This is the display for the quiz questions and answers text. */
 #quiz {
-    text-indent: 50px;
+    text-indent: 0px;
     display:none;
     font-size: 28px;
 }
@@ -89,6 +89,14 @@ button {
 	margin-left: 150px;
 }
 
+/* This is for showing the "next" button at the end of the questionnaire*/
+#finish {
+   display:none;
+   position:relative;
+   margin-top: -90px;
+   margin-left: 550px;
+}
+
 /* This is the container where questions are displayed. */
 #container {
     width:75%;
@@ -97,7 +105,7 @@ button {
     padding: 0 25px 140px 25px;
     background-color: #ccffff;
     color: black;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     font-family: 'laCartoonerie'
     height: absolute;
@@ -111,8 +119,8 @@ ul {
 }
 
 li {
-	padding: 100px;
+	padding: 50px;
         margin: 100px;
 	display:inline;
-	font-size: 36px;
+	font-size: 28px;
 }

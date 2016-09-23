@@ -44,7 +44,7 @@ function setup(){
 function start_fearRate(){
 
 	var message = new ROSLIB.Message({
-		data: "Start pain anxiety 2"
+		data: "Start fear rate 2"
 	});
 
 	main_topic.publish(message);
@@ -153,7 +153,7 @@ function fear_rate6() {
 }
 
 function timer() {
-	window.setTimeout(show_next, 17000);	
+	window.setTimeout(show_next, 5000);	
 }
 
 function show_next() {

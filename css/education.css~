@@ -176,6 +176,23 @@ html{
 	margin-left: 940px;
 }
 
+#skip{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: 660px;
+	margin-left: 1160px;
+}
+
+#skip2{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: -200px;
+	margin-left: 1160px;
+}
+
+
 /*next_spray is the id used by coldSpray game*/
 #next_spray{
 	position: absolute;

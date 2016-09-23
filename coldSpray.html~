@@ -1,0 +1,44 @@
+<html manifest="reference.appcache">
+	<head>
+		<title>Cold Spray</title>
+		<script src ="js/coldSpray.js"></script>
+		<script type="text/javascript"></script>
+		<script type="text/javascript" src="eventemitter2.min.js"></script>
+		<script type="text/javascript" src="roslib.min.js"></script>
+		<link rel ="stylesheet" href="css/education.css">
+	</head>
+	<body>
+		<html class = "coldSpray-bg">
+		
+		<canvas>
+			
+		</canvas>
+		<div id = "next_spray" style="visibility: hidden">
+			<a href = "insertion.html"/> <img src = "image/next.png" alt = "click to continue"/>
+		</div>
+		<div id = "skip2" style="visibility: visible">
+			<a href = "insertion.html"><img src = "image/skip.png" alt = "click to continue" width =20% height =15% /> 
+		</div>
+		
+		
+		<script>
+			var c = document.querySelector('canvas');
+			var cx = c.getContext('2d');
+			var background = new Image();
+			background.src = "image/mergedBackground.png";
+			var mousedown = false;
+			var oldx = null;
+			var oldy = null;
+			var pixels = null;
+			var shapepixels = null;
+			c.addEventListener('mousedown', onmousedown, false);
+			c.addEventListener('mouseup', onmouseup, false);
+			c.addEventListener('mousemove', onmousemove, false);
+			c.addEventListener('touchstart', ontouchstart, false);
+			c.addEventListener('touchend', ontouchend, false);
+			c.addEventListener('touchmove', ontouchmove, false);
+			setupCanvas();
+		</script>
+		
+	</body>
+</html>

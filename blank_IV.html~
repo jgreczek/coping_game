@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Blank Page IV</title>
+		<script src ="js/blank_IV.js"></script>
+		<script type="text/javascript"></script>
+		<script type="text/javascript" src="eventemitter2.min.js"></script>
+		<script type="text/javascript" src="roslib.min.js"></script>
+		<link rel="stylesheet" href="css/blank_IV.css">
+	</head>
+	<body>
+		<html class = "end-bg">
+		<div id='title'>
+			<h1 class = fontsforweb_fontid_1396">Thanks for helping me! Now it's time for your IV.</h1>
+		</div>
+		<div id = "next">
+			<a href = "FACES3.html"><img src = "image/next.png" alt = "click to continue"/> 
+		</div>
+	</body>
+</html>

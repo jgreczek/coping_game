@@ -153,7 +153,7 @@ function fear_rate6() {
 }
 
 function timer() {
-	window.setTimeout(show_next, 17000);	
+	window.setTimeout(show_next, 7000);	
 }
 
 function show_next() {

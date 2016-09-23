@@ -22,7 +22,6 @@ body {
 	font-family: 'laCartoonerie';
 }
 
-
 #next{
     margin-left: 500px;
      margin-top: -10px;

@@ -26,4 +26,13 @@ h1 {
 	height: 194px;
 	margin-top: 340px;
 	margin-left: 540px;
+	display: none;
+}
+
+#skip{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: 0px;
+	margin-left: 0px;
 }

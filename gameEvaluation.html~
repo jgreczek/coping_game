@@ -1,9 +1,9 @@
-<html>
+<html manifest="reference.appcache">
 <head>
 	<script type="text/javascript"></script>
 	<script src ="js/gameEvaluation.js"></script>
-	<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
-	<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+	<script type="text/javascript" src="eventemitter2.min.js"></script>
+		<script type="text/javascript" src="roslib.min.js"></script>
 	<link rel ="stylesheet" href="css/gameEvaluation.css">
 </head>
 <body>	
@@ -17,7 +17,7 @@
 	<!-- Modal content -->
 	  <div class="modal-content">
 	    <div class="modal-header">
-	      <h2>How do you feel?</h2>
+	      <h2 class = "fontsforweb_fontid_1396">How was the game?</h2>
 	    </div>
 	    <div class="modal-body">
 	    <ul>

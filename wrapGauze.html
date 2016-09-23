@@ -1,9 +1,9 @@
-<html>
+<html manifest="reference.appcache">
 	<head>
 		<title>Wrap Gauze</title>
 		<script src="js/gauzeHand.js"></script>
-		<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
-		<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+		<script type="text/javascript" src="eventemitter2.min.js"></script>
+		<script type="text/javascript" src="roslib.min.js"></script>
 		<link rel="stylesheet" href="css/education.css">
 	</head>
 	<body>
@@ -17,7 +17,10 @@
 		<div id = "next" style = "visibility: hidden">
 			<a href = "#"><img src = "image/next.png" alt = "click to continue" onClick = "document.location.href = 'gameEvaluation2.html'"/> 
 		</div>
-
+		<div id = "skip" style="visibility: visible">
+			<a href = "gameEvaluation2.html"><img src = "image/skip.png" alt = "click to continue" width =20% height =15% /> 
+		</div>
+		
 		<div id = "gauze_display">
 			<img id="gauze1" src="image/gauze.png" />
 			<img id="gauze2" src="image/gauze.png" />

@@ -58,10 +58,10 @@ body {
 	margin-left: 280px;
 	background: url("../image/balloon.png") no-repeat;
 	
-	-webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+	-webkit-transition: 2s ease-in-out;
+    -moz-transition: 2s ease-in-out;
+    -o-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
 }
 
 #inflatebutton:active + #balloon {
@@ -87,4 +87,10 @@ body {
 	margin-left: 940px;
 }
 
-
+#skip{
+	position: absolute;
+	width: 268px;
+	height: 194px;
+	margin-top: 660px;
+	margin-left: 1160px;
+}

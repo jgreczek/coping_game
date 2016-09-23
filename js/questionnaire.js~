@@ -4,30 +4,32 @@
 // 2) the number of "yes" responses for each participant.
 
 var questions = [{
-    question: "I have trouble making up my mind.", //1
-    choices: ["Yes", "No"],
-    correctAnswer: "Yes"
+    question: "I worry about things", //1
+    choices: ["Never", "Sometimes", "Often", "Always"],
+    correctAnswer: "Never"
   }, {
-    question: "I get nervous when things do not go the right way for me.", //2
-    choices: ["Yes", "No"],
-    correctAnswer: "Yes"
+    question: "When I have a problem, I get a funny feeling in my stomach", //2
+    choices: ["Never", "Sometimes", "Often", "Always"],
+    correctAnswer: "Never"
   }, {
-    question: "Others seem to do things easier than I can.", //3
-    choices: ["Yes", "No"],
-    correctAnswer: "Yes"
+    question: "I feel afraid", //3
+    choices: ["Never", "Sometimes", "Often", "Always"],
+    correctAnswer: "Never"
   }, {
-    question: "I like everyone I know.", //4
-    choices: ["Yes", "No"],
-    correctAnswer: "Yes"
+    question: "When I have a problem, my heart beats really fast", //4
+    choices: ["Never", "Sometimes", "Often", "Always"],
+    correctAnswer: "Never"
   }, {
-  question: "Often I have trouble getting my breath.", //5 
-    choices: ["Yes", "No"],
-    correctAnswer: "Yes"
+  question: "I worry that somthing bad will happen to me", //5 
+    choices: ["Never", "Sometimes", "Often", "Always"],
+    correctAnswer: "Never"
   }, {
-    question: "I worry a lot of the time.", //6
-    choices: ["Yes", "No"],
-    correctAnswer: "Yes"
-  }, {
+    question: "When I have a problem, I feel shaky", //6
+    choices: ["Never", "Sometimes", "Often", "Always"],
+    correctAnswer: "Never"
+  }];
+
+/*{
     question: "I am afraid of a lot of things.", //7
     choices: ["Yes", "No"],
     correctAnswer: "Yes"
@@ -152,7 +154,7 @@ var questions = [{
     choices: ["Yes", "No"],
     correctAnswer: "Yes"
   }];
-  
+  */
   var questionCounter = 0; //Tracks question number
   var selections = []; //Array containing user choices
   var quiz = $('#quiz'); //Quiz div object

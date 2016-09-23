@@ -3,8 +3,8 @@
 		<title>Cold Spray</title>
 		<script src ="js/coldSpray.js"></script>
 		<script type="text/javascript"></script>
-		<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
-		<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+		<script type="text/javascript" src="eventemitter2.min.js"></script>
+		<script type="text/javascript" src="roslib.min.js"></script>
 		<link rel ="stylesheet" href="css/education.css">
 	</head>
 	<body>
@@ -14,8 +14,12 @@
 			
 		</canvas>
 		<div id = "next_spray" style="visibility: hidden">
-				<a href = "insertion.html"/> <img src = "image/next.png" alt = "click to continue"/>
-			</div>
+			<a href = "insertion.html"/> <img src = "image/next.png" alt = "click to continue"/>
+		</div>
+		<div id = "skip2" style="visibility: visible">
+			<a href = "insertion.html"><img src = "image/skip.png" alt = "click to continue" width =20% height =15% /> 
+		</div>
+		
 		
 		<script>
 			var c = document.querySelector('canvas');
